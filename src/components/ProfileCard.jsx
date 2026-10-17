@@ -1,154 +1,235 @@
 import { useState } from 'react';
 
-export default function ProfileCard({ 
-  name, 
+export default function ProfileCard({
   idNumber,
-  responsibility, 
-  interactionType, 
-  interactionData = [], 
-  skills = [], 
-  avatar 
+  name,
+  surname,
+  location,
+  age,
+  role,
+  quote,
+  githubUrl,
+  portfolioUrl,
+  skills = [],
+  movies = [],
+  music = [],
+  interactionTitle,
+  interactionDescription,
+  interactionNotes = [],
+  avatarUrl
 }) {
   const [index, setIndex] = useState(0);
-  const [activeMessage, setActiveMessage] = useState(interactionData[0] || 'Registro inicial en espera.');
-  const [isActive, setIsActive] = useState(false);
+  const [activeMessage, setActiveMessage] = useState(interactionNotes[0] || 'En espera de señal.');
+  const [activeTab, setActiveTab] = useState('skills'); // 'skills' | 'movies' | 'music'
 
-  // Manejador genérico que respeta la interacción narrativa de cada perfil (Criterio 08)
-  const handleInteraction = () => {
-    setIsActive(true);
-    const nextIndex = (index + 1) % interactionData.length;
-    setIndex(nextIndex);
-    setActiveMessage(interactionData[nextIndex]);
-    
-    // Pequeño timeout para reiniciar el efecto visual de pulso
-    setTimeout(() => setIsActive(false), 300);
-  };
-
-  const handleReset = () => {
-    setIndex(0);
-    setActiveMessage(interactionData[0]);
+  const handleNextSignal = () => {
+    const nextIdx = (index + 1) % interactionNotes.length;
+    setIndex(nextIdx);
+    setActiveMessage(interactionNotes[nextIdx]);
   };
 
   return (
-    <article style={{
-      background: 'var(--bg-secondary)',
-      border: '1px solid var(--border-color)',
-      borderRadius: '8px',
-      padding: '1.5rem',
-      display: 'flex',
-      flexDirection: 'column',
-      justifyContent: 'space-between',
-      gap: '1.25rem',
-      transition: 'border-color 0.2s ease'
-    }}>
-      <div>
-        {/* Cabecera del expediente */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
-          <img
-            src={avatar}
-            alt={name}
-            style={{ 
-              width: '64px', 
-              height: '64px', 
-              borderRadius: '50%', 
-              border: '2px solid var(--accent-lovecraft)',
-              background: '#101512'
-            }}
-          />
-          <div>
-            <span style={{ fontSize: '0.75rem', color: 'var(--accent-lovecraft)', letterSpacing: '1px' }}>
-              EXPEDIENTE {idNumber}
-            </span>
-            <h3 style={{ margin: '0.2rem 0', fontSize: '1.15rem' }}>{name}</h3>
-            <p style={{ color: 'var(--text-muted)', fontSize: '0.85rem' }}>{responsibility}</p>
-          </div>
-        </div>
-
-        {/* Competencias / Habilidades */}
-        <div style={{ marginBottom: '1rem' }}>
-          <strong style={{ fontSize: '0.8rem', display: 'block', marginBottom: '0.4rem', color: 'var(--text-muted)' }}>
-            Especialidad en el Archivo:
-          </strong>
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.35rem' }}>
-            {skills.map((skill, idx) => (
-              <span key={idx} style={{ 
-                background: '#21262d', 
-                color: 'var(--text-main)',
-                padding: '0.2rem 0.55rem', 
-                borderRadius: '4px', 
-                fontSize: '0.75rem' 
-              }}>
-                {skill}
-              </span>
-            ))}
-          </div>
+    <article className="archive-card" style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
+      {/* Cabecera del expediente */}
+      <div style={{ display: 'flex', gap: '1rem', alignItems: 'flex-start' }}>
+        <img
+          src={avatarUrl || `https://api.dicebear.com/7.x/bottts/svg?seed=${name}`}
+          alt={name}
+          style={{
+            width: '76px',
+            height: '76px',
+            borderRadius: '4px',
+            border: '2px solid var(--accent-copper)',
+            objectFit: 'cover',
+            background: 'var(--bg-ink)'
+          }}
+        />
+        <div style={{ flex: 1 }}>
+          <span style={{ fontSize: '0.7rem', color: 'var(--accent-copper-bright)', letterSpacing: '1.5px', textTransform: 'uppercase' }}>
+            EXPEDIENTE N.º {idNumber} · ARCHIVO 2026
+          </span>
+          <h3 style={{ fontSize: '1.3rem', margin: '0.2rem 0', color: 'var(--text-paper)' }}>
+            {name} <em style={{ color: 'var(--accent-copper)', fontStyle: 'italic' }}>{surname}</em>
+          </h3>
+          <p style={{ fontSize: '0.85rem', color: 'var(--text-paper-dim)' }}>
+            ⌖ {location} {age && `· ${age} años`}
+          </p>
+          <p style={{ fontSize: '0.75rem', color: 'var(--accent-copper)', textTransform: 'uppercase', letterSpacing: '1px', marginTop: '0.2rem' }}>
+            {role}
+          </p>
         </div>
       </div>
 
-      {/* Módulo Interactivo narrativo heredado de TP1 */}
-      <div style={{ 
-        borderTop: '1px solid var(--border-color)', 
-        paddingTop: '1rem',
-        background: '#0d1117',
-        padding: '0.85rem',
-        borderRadius: '6px'
-      }}>
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.6rem' }}>
-          <span style={{ fontSize: '0.75rem', textTransform: 'uppercase', color: 'var(--accent-lovecraft)', fontWeight: 'bold' }}>
-            {interactionType}
-          </span>
-          <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>
-            Paso {index + 1} de {interactionData.length}
-          </span>
-        </div>
-
-        <p style={{ 
-          minHeight: '48px', 
-          fontSize: '0.82rem', 
-          color: isActive ? 'var(--accent-lovecraft)' : '#c9d1d9',
+      {/* Cita de introducción */}
+      {quote && (
+        <blockquote style={{
+          borderLeft: '2px solid var(--accent-copper)',
+          paddingLeft: '0.75rem',
+          fontFamily: 'var(--font-lore)',
           fontStyle: 'italic',
-          lineHeight: '1.4',
-          transition: 'color 0.2s ease'
+          color: 'var(--text-paper-dim)',
+          fontSize: '0.9rem'
         }}>
-          "{activeMessage}"
-        </p>
+          "{quote}"
+        </blockquote>
+      )}
 
-        <div style={{ display: 'flex', gap: '0.5rem', marginTop: '0.75rem' }}>
-          <button
-            type="button"
-            onClick={handleInteraction}
+      {/* Enlaces al GitHub y Portfolio */}
+      <div style={{ display: 'flex', gap: '0.75rem' }}>
+        {githubUrl && (
+          <a
+            href={githubUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
-              flex: '1',
-              padding: '0.45rem',
-              background: '#238636',
-              border: 'none',
-              borderRadius: '4px',
-              color: '#fff',
-              cursor: 'pointer',
-              fontSize: '0.78rem',
-              fontWeight: '500'
+              fontSize: '0.75rem',
+              color: 'var(--accent-copper-bright)',
+              textDecoration: 'none',
+              padding: '0.3rem 0.6rem',
+              background: 'var(--bg-soft)',
+              border: '1px solid var(--border-copper)',
+              borderRadius: '4px'
             }}
           >
-            {index === interactionData.length - 1 ? 'Reiniciar ciclo ↻' : 'Consultar señal ↗'}
+            GitHub ↗
+          </a>
+        )}
+        {portfolioUrl && (
+          <a
+            href={portfolioUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontSize: '0.75rem',
+              color: 'var(--text-paper)',
+              textDecoration: 'none',
+              padding: '0.3rem 0.6rem',
+              background: 'var(--bg-soft)',
+              border: '1px solid var(--border-subtle)',
+              borderRadius: '4px'
+            }}
+          >
+            Portfolio ↗
+          </a>
+        )}
+      </div>
+
+      {/* Pestañas para conmutar Habilidades, Películas y Música */}
+      <div>
+        <div style={{ display: 'flex', gap: '0.5rem', borderBottom: '1px solid var(--border-subtle)', paddingBottom: '0.4rem', marginBottom: '0.75rem' }}>
+          <button
+            onClick={() => setActiveTab('skills')}
+            style={{
+              background: 'transparent',
+              border: 'none',
+              color: activeTab === 'skills' ? 'var(--accent-copper-bright)' : 'var(--text-muted)',
+              borderBottom: activeTab === 'skills' ? '2px solid var(--accent-copper-bright)' : 'none',
+              padding: '0.2rem 0.4rem',
+              cursor: 'pointer',
+              fontSize: '0.75rem',
+              fontFamily: 'var(--font-display)'
+            }}
+          >
+            01 / Habilidades
           </button>
-          {index > 0 && (
-            <button
-              type="button"
-              onClick={handleReset}
-              style={{
-                padding: '0.45rem 0.75rem',
-                background: '#21262d',
-                border: '1px solid var(--border-color)',
-                borderRadius: '4px',
-                color: 'var(--text-muted)',
-                cursor: 'pointer',
-                fontSize: '0.78rem'
-              }}
-            >
-              Silenciar
-            </button>
-          )}
+          <button
+            onClick={() => setActiveTab('movies')}
+            style={{
+              background: 'transparent',
+              border: 'none',
+              color: activeTab === 'movies' ? 'var(--accent-copper-bright)' : 'var(--text-muted)',
+              borderBottom: activeTab === 'movies' ? '2px solid var(--accent-copper-bright)' : 'none',
+              padding: '0.2rem 0.4rem',
+              cursor: 'pointer',
+              fontSize: '0.75rem',
+              fontFamily: 'var(--font-display)'
+            }}
+          >
+            02 / Cine
+          </button>
+          <button
+            onClick={() => setActiveTab('music')}
+            style={{
+              background: 'transparent',
+              border: 'none',
+              color: activeTab === 'music' ? 'var(--accent-copper-bright)' : 'var(--text-muted)',
+              borderBottom: activeTab === 'music' ? '2px solid var(--accent-copper-bright)' : 'none',
+              padding: '0.2rem 0.4rem',
+              cursor: 'pointer',
+              fontSize: '0.75rem',
+              fontFamily: 'var(--font-display)'
+            }}
+          >
+            03 / Música
+          </button>
         </div>
+
+        {/* Contenido según pestaña */}
+        {activeTab === 'skills' && (
+          <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.4rem' }}>
+            {skills.map((skill, i) => (
+              <div key={i} style={{ background: 'var(--bg-ink)', padding: '0.4rem 0.6rem', borderRadius: '4px', border: '1px solid var(--border-subtle)', fontSize: '0.75rem' }}>
+                <span style={{ color: 'var(--accent-copper)', marginRight: '0.3rem' }}>◈</span>
+                {skill}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {activeTab === 'movies' && (
+          <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.3rem', fontSize: '0.8rem', color: 'var(--text-paper-dim)' }}>
+            {movies.map((m, i) => (
+              <li key={i}>🎬 <strong style={{ color: 'var(--text-paper)' }}>{m}</strong></li>
+            ))}
+          </ul>
+        )}
+
+        {activeTab === 'music' && (
+          <ul style={{ listStyle: 'none', display: 'flex', flexDirection: 'column', gap: '0.3rem', fontSize: '0.8rem', color: 'var(--text-paper-dim)' }}>
+            {music.map((m, i) => (
+              <li key={i}>🎵 <strong style={{ color: 'var(--text-paper)' }}>{m}</strong></li>
+            ))}
+          </ul>
+        )}
+      </div>
+
+      {/* Módulo interactivo del TP1 */}
+      <div style={{
+        marginTop: 'auto',
+        background: 'var(--bg-ink)',
+        border: '1px solid var(--border-copper)',
+        borderRadius: '6px',
+        padding: '0.85rem'
+      }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.4rem' }}>
+          <span style={{ fontSize: '0.7rem', color: 'var(--accent-copper-bright)', textTransform: 'uppercase', letterSpacing: '1px' }}>
+            {interactionTitle}
+          </span>
+          <span style={{ fontSize: '0.7rem', color: 'var(--text-muted)' }}>
+            Señal {index + 1}/{interactionNotes.length}
+          </span>
+        </div>
+        <p style={{ minHeight: '44px', fontSize: '0.8rem', color: 'var(--text-paper)', fontStyle: 'italic', margin: '0.4rem 0' }}>
+          "{activeMessage}"
+        </p>
+        <button
+          type="button"
+          onClick={handleNextSignal}
+          style={{
+            width: '100%',
+            padding: '0.45rem',
+            background: 'var(--accent-copper)',
+            color: '#101512',
+            border: 'none',
+            borderRadius: '4px',
+            cursor: 'pointer',
+            fontSize: '0.75rem',
+            fontWeight: 'bold',
+            fontFamily: 'var(--font-display)'
+          }}
+        >
+          {interactionDescription || 'Consultar el archivo ↗'}
+        </button>
       </div>
     </article>
   );
