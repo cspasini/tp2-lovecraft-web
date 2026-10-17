@@ -1,10 +1,20 @@
 :root {
-  --bg-primary: #0d1117;
-  --bg-secondary: #161b22;
-  --accent-lovecraft: #2ea043;
-  --text-main: #e6edf3;
-  --text-muted: #8b949e;
-  --border-color: #30363d;
+  /* Paleta oficial Umbral 5B */
+  --bg-ink: #101512;
+  --bg-raised: #151c18;
+  --bg-soft: #1b241e;
+  --text-paper: #e8e2d1;
+  --text-paper-dim: #b4b7a5;
+  --text-muted: #8b9484;
+  --accent-copper: #c18959;
+  --accent-copper-bright: #d6a273;
+  --border-copper: rgba(193, 137, 89, 0.25);
+  --border-subtle: rgba(180, 183, 165, 0.12);
+
+  /* Tipografías */
+  --font-display: 'Marcellus', serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-lore: 'IM Fell English', serif;
 }
 
 * {
@@ -14,41 +24,60 @@
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  background-color: var(--bg-primary);
-  color: var(--text-main);
+  font-family: var(--font-body);
+  background-color: var(--bg-ink);
+  color: var(--text-paper);
   min-height: 100vh;
+  line-height: 1.6;
+  background-image: 
+    radial-gradient(circle at 15% 20%, rgba(193, 137, 89, 0.04) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(27, 36, 30, 0.6) 0%, transparent 50%);
 }
 
+h1, h2, h3, .brand-title {
+  font-family: var(--font-display);
+  letter-spacing: 0.5px;
+  color: var(--text-paper);
+}
+
+/* Layout General */
 .app-container {
   display: flex;
   min-height: 100vh;
 }
 
-/* Sidebar */
+/* Sidebar Estilo Archivo */
 .sidebar {
-  width: 260px;
-  background-color: var(--bg-secondary);
-  border-right: 1px solid var(--border-color);
-  padding: 1.5rem;
+  width: 280px;
+  background-color: var(--bg-raised);
+  border-right: 1px solid var(--border-copper);
+  padding: 2rem 1.5rem;
   display: flex;
   flex-direction: column;
   position: sticky;
   top: 0;
   height: 100vh;
   z-index: 100;
+  box-shadow: 4px 0 24px rgba(0, 0, 0, 0.4);
+}
+
+.sidebar-brand {
+  border-bottom: 1px solid var(--border-copper);
+  padding-bottom: 1.25rem;
 }
 
 .sidebar-brand h2 {
-  font-size: 1.25rem;
-  color: var(--accent-lovecraft);
-  margin-bottom: 0.25rem;
+  font-size: 1.35rem;
+  color: var(--accent-copper-bright);
 }
 
 .team-badge {
-  font-size: 0.75rem;
+  font-size: 0.7rem;
   color: var(--text-muted);
+  letter-spacing: 2px;
   text-transform: uppercase;
+  display: block;
+  margin-top: 0.25rem;
 }
 
 .sidebar-nav {
@@ -60,42 +89,69 @@ body {
 }
 
 .sidebar-nav a {
-  color: var(--text-muted);
+  font-family: var(--font-display);
+  color: var(--text-paper-dim);
   text-decoration: none;
-  padding: 0.65rem 0.85rem;
-  border-radius: 6px;
-  transition: all 0.2s ease;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  border-left: 2px solid transparent;
+  transition: all 0.25s ease;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 }
 
 .sidebar-nav a:hover {
-  background-color: #21262d;
-  color: var(--text-main);
+  background-color: var(--bg-soft);
+  color: var(--text-paper);
+  border-left-color: var(--accent-copper);
+  transform: translateX(4px);
 }
 
 .sidebar-nav a.active {
-  background-color: #238636;
-  color: #ffffff;
+  background-color: rgba(193, 137, 89, 0.12);
+  color: var(--accent-copper-bright);
+  border-left-color: var(--accent-copper-bright);
   font-weight: bold;
 }
 
 .sidebar-footer {
   color: var(--text-muted);
-  border-top: 1px solid var(--border-color);
-  padding-top: 1rem;
+  border-top: 1px solid var(--border-subtle);
+  padding-top: 1.25rem;
+  font-size: 0.75rem;
+  font-family: var(--font-lore);
 }
 
-/* Área principal */
+/* Área de Contenido */
 .content-area {
   flex-grow: 1;
-  padding: 2.5rem;
-  background-color: var(--bg-primary);
+  padding: 3.5rem;
+  background-color: var(--bg-ink);
+  max-width: 1300px;
 }
 
+/* Efectos de Archivo y Tarjetas */
+.archive-card {
+  background-color: var(--bg-raised);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 1.75rem;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.archive-card:hover {
+  border-color: var(--border-copper);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+}
+
+/* Botón flotante Mobile */
 .mobile-toggle {
   display: none;
 }
 
-/* Responsive mobile */
 @media (max-width: 768px) {
   .mobile-toggle {
     display: block;
@@ -103,18 +159,18 @@ body {
     top: 1rem;
     left: 1rem;
     z-index: 110;
-    background: var(--bg-secondary);
-    color: var(--text-main);
-    border: 1px solid var(--border-color);
-    padding: 0.5rem 0.75rem;
-    border-radius: 6px;
+    background: var(--bg-raised);
+    color: var(--accent-copper);
+    border: 1px solid var(--border-copper);
+    padding: 0.6rem 0.9rem;
+    border-radius: 4px;
     cursor: pointer;
   }
 
   .sidebar {
     position: fixed;
-    left: -280px;
-    transition: left 0.3s ease;
+    left: -300px;
+    transition: left 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .sidebar.open {
@@ -124,11 +180,12 @@ body {
   .backdrop {
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(16, 21, 18, 0.85);
+    backdrop-filter: blur(4px);
     z-index: 90;
   }
 
   .content-area {
-    padding: 4rem 1.5rem 1.5rem 1.5rem;
+    padding: 5rem 1.5rem 2rem 1.5rem;
   }
 }
