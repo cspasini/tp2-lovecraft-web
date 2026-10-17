@@ -1,22 +1,202 @@
 [
-  { "id": 1, "nombre": "Cthulhu", "categoria": "Primigenio", "origen": "R'lyeh", "peligro": "Cataclísmico", "descripcion": "Entidad cósmica dormida bajo las aguas del Pacífico Sur esperando despertar.", "lore": "Aparece por primera vez en 'La llamada de Cthulhu' (1928). Su presencia altera la psique humana." },
-  { "id": 2, "nombre": "Nyarlathotep", "categoria": "Dios Exterior", "origen": "Desconocido", "peligro": "Absoluto", "descripcion": "El Caos Reptante, mensajero y ejecutor de los Dioses Exteriores con mil formas.", "lore": "A diferencia de otros dioses cósmicos, disfruta manipulando a los humanos directamente." },
-  { "id": 3, "nombre": "Necronomicón", "categoria": "Tomo Prohibido", "origen": "Damasco", "peligro": "Mortal", "descripcion": "Grimorio prohibido escrito por Abdul Alhazred con rituales dimensionales.", "lore": "Contiene fórmulas arcanas capaces de rasgar el velo de nuestra realidad." },
-  { "id": 4, "nombre": "Yog-Sothoth", "categoria": "Dios Exterior", "origen": "Multidimensional", "peligro": "Absoluto", "descripcion": "La Llave y la Puerta. Todo el tiempo y espacio son uno en él.", "lore": "Conoce el pasado, presente y futuro de todas las dimensiones existentes simultáneamente." },
-  { "id": 5, "nombre": "Dagon", "categoria": "Primigenio", "origen": "Profundidades marinas", "peligro": "Alto", "descripcion": "Deidad venerada por los Profundos y la Orden Esotérica de Dagon en Innsmouth.", "lore": "Entidad de proporciones colosales vinculada a la mutación anfibia de humanos." },
-  { "id": 6, "nombre": "Azathoth", "categoria": "Dios Exterior", "origen": "Centro del Caos", "peligro": "Absoluto", "descripcion": "El Dios Ciego e Idiota que sueña toda la realidad en el centro del cosmos.", "lore": "Si alguna vez despierta de su letargo musical, la existencia entera desaparecerá." },
-  { "id": 7, "nombre": "Profundos", "categoria": "Criatura", "origen": "Arrecife del Diablo", "peligro": "Medio", "descripcion": "Raza humanoide anfibia inmortal que pacta con pueblos pesqueros costeros.", "lore": "Habitan ciudades submarinas como Y'ha-nthlei y adoran al dios Dagon." },
-  { "id": 8, "nombre": "De Vermis Mysteriis", "categoria": "Tomo Prohibido", "origen": "Praga", "peligro": "Mortal", "descripcion": "Misterios del Gusano, tratado de necromancia redactado por Ludvig Prinn.", "lore": "Describe invocaciones de horrores invisibles y hechizos de posesión." },
-  { "id": 9, "nombre": "Shoggoth", "categoria": "Criatura", "origen": "Antártida", "peligro": "Muy Alto", "descripcion": "Masas protoplasmáticas gelatinosas con ojos cambiantes y fuerza descomunal.", "lore": "Creados como esclavos biológicos por los Antiguos antes de rebelarse violentamente." },
-  { "id": 10, "nombre": "Los Antiguos", "categoria": "Criatura", "origen": "Espacio Profundo", "peligro": "Alto", "descripcion": "Científicos primordiales de anatomía radiada que colonizaron la Tierra antigua.", "lore": "Sus ciudades ciclópeas quedaron congeladas en las montañas de la locura antártica." },
-  { "id": 11, "nombre": "Culto de Cthulhu", "categoria": "Culto", "origen": "Global", "peligro": "Alto", "descripcion": "Red sectaria secreta que realiza sacrificios para apresurar el despertar de R'lyeh.", "lore": "Posee células en los pantanos de Luisiana, Groenlandia y los mares de Oceanía." },
-  { "id": 12, "nombre": "Shub-Niggurath", "categoria": "Dios Exterior", "origen": "Dimensión de la Fertilidad", "peligro": "Absoluto", "descripcion": "La Negra Cabra de los Bosques con sus diez mil vástagos grotescos.", "lore": "Encarna la fertilidad corrupta y la mutación descontrolada de la carne." },
-  { "id": 13, "nombre": "Mi-Go", "categoria": "Criatura", "origen": "Yuggoth (Plutón)", "peligro": "Alto", "descripcion": "Seres fungoides extraterrestres que extraen cerebros humanos en cilindros.", "lore": "Explotan minerales oscuros en las colinas de Vermont y viajan por el éter." },
-  { "id": 14, "nombre": "El Rey de Amarillo", "categoria": "Tomo Prohibido", "origen": "París", "peligro": "Mortal", "descripcion": "Obra teatral trágica que induce a la locura total y suicidio a quien la lee.", "lore": "Relacionada intrínsecamente con Carcosa y la deidad Hastur." },
-  { "id": 15, "nombre": "Hastur", "categoria": "Primigenio", "origen": "Híades / Aldebarán", "peligro": "Absoluto", "descripcion": "Aquel Que No Debe Ser Nombrado, señor del lago Hali y Carcosa.", "lore": "Pronunciar su nombre en voz alta atrae su influencia corruptora." },
-  { "id": 16, "nombre": "Culto de Starry Wisdom", "categoria": "Culto", "origen": "Providence", "peligro": "Alto", "descripcion": "Secta que adoraba al Acechador de las Tinieblas mediante el Trapezoedro.", "lore": "Operaba desde una iglesia gótica abandonada en Federal Hill." },
-  { "id": 17, "nombre": "Perros de Tíndalos", "categoria": "Criatura", "origen": "Tiempo Angulado", "peligro": "Muy Alto", "descripcion": "Cazadores extradimensionales que emergen de cualquier ángulo menor a 120 grados.", "lore": "Persiguen sin descanso a viajeros temporales que alteran el continuo." },
-  { "id": 18, "nombre": "Cultes des Goules", "categoria": "Tomo Prohibido", "origen": "Francia", "peligro": "Medio", "descripcion": "Tratado del Conde d'Erlette sobre canibalismo ritual y guls de cementerio.", "lore": "Describe las sociedades subterráneas de necrófagos bajo París y Boston." },
-  { "id": 19, "nombre": "Ghouls (Necrófagos)", "categoria": "Criatura", "origen": "Túneles subterráneos", "peligro": "Medio", "descripcion": "Humanoides degenerados con rasgos caninos que habitan catacumbas.", "lore": "Pueden viajar entre el mundo de la vigilia y las Tierras del Sueño." },
-  { "id": 20, "nombre": "Trapezoedro Resplandeciente", "categoria": "Tomo Prohibido", "origen": "Yuggoth", "peligro": "Muy Alto", "descripcion": "Cristal poliédrico oscuro tallado que permite contactar con horrores cósmicos.", "lore": "Invocaba al Acechador de la Oscuridad si se apagaban todas las luces del templo." }
+  {
+    "id": 1,
+    "name": "Cthulhu",
+    "category": "Primigenio",
+    "origin": "R'lyeh",
+    "threatLevel": "Cataclísmico",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Cthulhu_sketch_by_Lovecraft.jpg/440px-Cthulhu_sketch_by_Lovecraft.jpg",
+    "description": "Entidad cósmica de tamaño ciclópeo con rasgos combinados de cefalópodo, dragón y forma antropomorfa. Yace en letargo hipnótico dentro de la ciudad sumergida de R'lyeh, comunicándose mediante pulsos telepáticos con mentes sensibles en la superficie.",
+    "historicalNote": "Descrito por primera vez en el manuscrito de Francis Wayland Thurston fechado en 1928."
+  },
+  {
+    "id": 2,
+    "name": "Necronomicón (Al Azif)",
+    "category": "Grimorio",
+    "origin": "Damasco / Abdul Alhazred",
+    "threatLevel": "Corruptor Mental",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Book_of_the_Law_manuscript.jpg/400px-Book_of_the_Law_manuscript.jpg",
+    "description": "El grimorio definitivo de saberes blasfemos y fórmulas de invocación arcana. Encuadernado y traducido clandestinamente al griego y latín; su mera lectura fragmentaria induce cuadros agudos de locura, degradación celular y desvanecimiento de la cordura.",
+    "historicalNote": "Se preserva un ejemplar restringido bajo llave en las bóvedas de la Universidad de Miskatonic."
+  },
+  {
+    "id": 3,
+    "name": "Nyarlathotep",
+    "category": "Dios Exterior",
+    "origin": "El Caos Primordial",
+    "threatLevel": "Extinción Inminente",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Nyarlathotep_silhouette.png/400px-Nyarlathotep_silhouette.png",
+    "description": "Conocido como el 'Caos Reptante' o el Faraón Negro. A diferencia de otros dioses que duermen o habitan dimensiones lejanas, Nyarlathotep camina entre la humanidad adoptando mil formas, manipulando los avances tecnológicos para precipitar el colapso.",
+    "historicalNote": "Documentado en expedientes arqueológicos del Valle de los Reyes en El Cairo."
+  },
+  {
+    "id": 4,
+    "name": "Profundos (Deep Ones)",
+    "category": "Criatura",
+    "origin": "Innsmouth / Arrecife del Diablo",
+    "threatLevel": "Alto",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Deep_one_sculpture.jpg/400px-Deep_one_sculpture.jpg",
+    "description": "Raza humanoide-ictínea que habita las profundidades abisales del océano. Biológicamente inmortales a menos que sufran muerte violenta; establecieron pactos reproductivos y de culto con los pobladores de Innsmouth a cambio de pesca abundante y oro arcaico.",
+    "historicalNote": "Investigación federal y redada naval sobre Innsmouth en el invierno de 1927."
+  },
+  {
+    "id": 5,
+    "name": "Shoggoth",
+    "category": "Criatura",
+    "origin": "Antártida (Meseta de Leng)",
+    "threatLevel": "Devastador",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Shoggoth_drawing.jpg/440px-Shoggoth_drawing.jpg",
+    "description": "Masas protoplasmáticas amorfas de viscosidad gelatinosa, capaces de generar órganos, ojos y miembros según su necesidad. Fueron concebidos por los Antiguos como mano de obra esclava antes de rebelarse violentamente contra sus creadores.",
+    "historicalNote": "Hallados en los túneles subterráneos de la expedición antártica de Miskatonic en 1930."
+  },
+  {
+    "id": 6,
+    "name": "De Vermis Mysteriis",
+    "category": "Grimorio",
+    "origin": "Praga / Ludvig Prinn",
+    "threatLevel": "Peligro Arcano",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Occult_book_engraving.jpg/400px-Occult_book_engraving.jpg",
+    "description": "'Los Misterios del Gusano'. Tratado escrito por el hechicero Ludvig Prinn antes de ser ejecutado por la Inquisición. Contiene secretos sobre la nigromancia egipcia y la invocación de entidades invisibles mediante sacrificios de sangre.",
+    "historicalNote": "Copia catalogada bajo estricta cuarentena en la Biblioteca Nacional de Francia."
+  },
+  {
+    "id": 7,
+    "name": "Yog-Sothoth",
+    "category": "Dios Exterior",
+    "origin": "El Continuo Espacio-Temporal",
+    "threatLevel": "Cosmológico",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Cosmic_spheres_illustration.jpg/440px-Cosmic_spheres_illustration.jpg",
+    "description": "La llave, el guardián de la puerta y la puerta misma. Se manifiesta como una aglomeración de esferas irisadas en constante ebullición. Yog-Sothoth existe en todo el tiempo y espacio simultáneamente, conociendo el pasado, el presente y lo venidero.",
+    "historicalNote": "Involucrado en los acontecimientos del Horror de Dunwich en 1928."
+  },
+  {
+    "id": 8,
+    "name": "Los Antiguos (Elder Things)",
+    "category": "Criatura",
+    "origin": "Espacio Profundo",
+    "threatLevel": "Medio",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Elder_Thing_fossil_sketch.jpg/400px-Elder_Thing_fossil_sketch.jpg",
+    "description": "Científicos estelares con torso en forma de barril, alas membranosas y apéndices tentaculares. Colonizaron la Tierra miles de millones de años antes del origen del hombre, erigiendo ciudades ciclópeas bajo los hielos de la Antártida.",
+    "historicalNote": "Fósiles recuperados por el profesor William Dyer de la Universidad de Miskatonic."
+  },
+  {
+    "id": 9,
+    "name": "Culto de Cthulhu (Reliquia)",
+    "category": "Artefacto",
+    "origin": "Pantanos de Luisiana",
+    "threatLevel": "Influencia Mental",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bas_relief_idol.jpg/400px-Bas_relief_idol.jpg",
+    "description": "Estatuilla tallada en piedra esteatita de color negro verdoso con vetas doradas, de material no catalogado en la corteza terrestre. Emite una ligera vibración táctil y un hedor rancio a fango marino cuando la marea sube.",
+    "historicalNote": "Confiscada por el inspector John Raymond Legrasse en la redada de 1907."
+  },
+  {
+    "id": 10,
+    "name": "Dagon",
+    "category": "Primigenio",
+    "origin": "Fosa Oceánica del Pacífico",
+    "threatLevel": "Catastrófico",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Monolith_sea_creature.jpg/440px-Monolith_sea_creature.jpg",
+    "description": "Divinidad acuática y progenitor colosal de los Profundos. Se alza sobre monolitos esculpidos en islas emergidas por fallas tectónicas, exigiendo sacrificios marinos y guiando las migraciones submarinas hacia los continentes.",
+    "historicalNote": "Avistado por un oficial naval náufrago durante la Primera Guerra Mundial."
+  },
+  {
+    "id": 11,
+    "name": "El Color que Cayó del Cielo",
+    "category": "Entidad",
+    "origin": "Espacio Interestelar",
+    "threatLevel": "Degradación Biológica",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Meteorite_crater_glow.jpg/400px-Meteorite_crater_glow.jpg",
+    "description": "Entidad informe compuesta por un espectro cromático que no pertenece a ningún color conocido en la Tierra. Cayó en un aerolito cerca de Arkham, marchitando la vegetación, mutando el ganado y drenando la fuerza vital de toda materia orgánica.",
+    "historicalNote": "El área afectada se conoce en los archivos como 'El Erial Maldito'."
+  },
+  {
+    "id": 12,
+    "name": "Trapezoedro Resplandeciente",
+    "category": "Artefacto",
+    "origin": "Yuggoth",
+    "threatLevel": "Invocación de la Sombra",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Black_crystal_faceted.jpg/400px-Black_crystal_faceted.jpg",
+    "description": "Cristal negro asimétrico tallado en épocas previas a la creación de los continentes. Permite contemplar visiones de mundos distantes cuando se sumerge en la oscuridad; si se le priva de luz, invoca al 'Morador de las Tinieblas'.",
+    "historicalNote": "Resguardado en la torre abandonada de la Iglesia de la Sabiduría Estelar en Providence."
+  },
+  {
+    "id": 13,
+    "name": "Culto de Ghouls (Carroñeros)",
+    "category": "Criatura",
+    "origin": "Túneles bajo Boston y París",
+    "threatLevel": "Medio-Alto",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Catacombs_skull_tunnel.jpg/400px-Catacombs_skull_tunnel.jpg",
+    "description": "Seres humanoides con facciones caninas, piel correosa y uñas endurecidas que habitan galerías de catacumbas y cementerios antiguos. Antiguos humanos degenerados por hábitos de canibalismo ritual prolongado durante generaciones.",
+    "historicalNote": "Pintados en las telas hiperrealistas del artista desaparecido Richard Upton Pickman."
+  },
+  {
+    "id": 14,
+    "name": "Cultes des Goules",
+    "category": "Grimorio",
+    "origin": "Francia / Conde d'Erlette",
+    "threatLevel": "Prohibido",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Old_leather_grimoire.jpg/400px-Old_leather_grimoire.jpg",
+    "description": "Monografía francesa del siglo XVIII que detalla las sociedades secretas de necrófagos que operaban en las catacumbas de París y las fórmulas de preservación y resurrección de restos óseos.",
+    "historicalNote": "Solo existen dos ejemplares conocidos tras la quema eclesiástica de 1737."
+  },
+  {
+    "id": 15,
+    "name": "Mi-Go (Hongos de Yuggoth)",
+    "category": "Criatura",
+    "origin": "Yuggoth (Plutón)",
+    "threatLevel": "Extirpación Cerebral",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Crustacean_hybrid_fossil.jpg/400px-Crustacean_hybrid_fossil.jpg",
+    "description": "Organismos fúngicos rosados con pinzas de crustáceo y cabezas compuestas de anillos de antenas. Extraen minerales de las colinas de Vermont y son capaces de extirpar cerebros humanos vivos para almacenarlos en cilindros metálicos parlantes.",
+    "historicalNote": "Descubiertos en las colinas de Townshend durante las inundaciones de 1927."
+  },
+  {
+    "id": 16,
+    "name": "Libro de Eibon",
+    "category": "Grimorio",
+    "origin": "Hiperbórea / Eibon",
+    "threatLevel": "Saber Primordial",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Ancient_scroll_parchment.jpg/400px-Ancient_scroll_parchment.jpg",
+    "description": "Texto antiquísimo atribuido al brujo hiperbóreo Eibon. Describe los ciclos del dios sapo Tsathoggua y las dimensiones heladas que antecedieron a la última glaciación de la Tierra.",
+    "historicalNote": "Manuscrito conservado en rollos de pergamino de piel de mastodonte."
+  },
+  {
+    "id": 17,
+    "name": "Semilla Estelar de Cthulhu",
+    "category": "Criatura",
+    "origin": "Xoth",
+    "threatLevel": "Muy Alto",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Octopus_tentacles_dark.jpg/400px-Octopus_tentacles_dark.jpg",
+    "description": "Versiones menores pero igualmente letales de Cthulhu. Libraron guerras territoriales contra los Antiguos durante el Mesozoico antes de quedar sepultados bajo las aguas del Pacífico Sur.",
+    "historicalNote": "Monitoreados por sonares oceanográficos de la Armada Argentina en la fosa de las Shetland."
+  },
+  {
+    "id": 18,
+    "name": "Manuscritos Pnakóticos",
+    "category": "Grimorio",
+    "origin": "La Gran Raza de Yith",
+    "threatLevel": "Cronológico",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Cuneiform_clay_tablet.jpg/400px-Cuneiform_clay_tablet.jpg",
+    "description": "Primer libro de filosofía oculta conocido en la historia humana. Traducido a partir de tablillas de arcilla conservadas en la ciudad perdida de Pnakotus, en el Gran Desierto Arenoso de Australia.",
+    "historicalNote": "Contiene el registro de intercambio de mentes a través de eones cósmicos."
+  },
+  {
+    "id": 19,
+    "name": "Gran Raza de Yith",
+    "category": "Criatura",
+    "origin": "Tierra Prehistórica / Yith",
+    "threatLevel": "Desplazamiento Temporal",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Cone_shaped_fossil.jpg/400px-Cone_shaped_fossil.jpg",
+    "description": "Seres cónicos de 3 metros de altura con cuatro apéndices superiores flexibles. Maestros del viaje temporal que proyectan sus conciencias a través del tiempo, ocupando cuerpos humanos contemporáneos para recopilar conocimiento enciclopédico.",
+    "historicalNote": "Expedición del profesor Nathaniel Wingate Peaslee en 1935."
+  },
+  {
+    "id": 20,
+    "name": "Azathoth",
+    "category": "Dios Exterior",
+    "origin": "El Centro del Infinito",
+    "threatLevel": "Aniquilación Cósmica",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Crab_Nebula.jpg/440px-Crab_Nebula.jpg",
+    "description": "El sultán demoníaco ciego y necio. Yace en el centro del cosmos rodeado de una corte de deidades menores que danzan al son de flautas y tambores arcanos para evitar que despierte y deshaga la realidad material en un instante.",
+    "historicalNote": "Referenciado como la fuente de toda entropía en las fórmulas de Alhazred."
+  }
 ]
