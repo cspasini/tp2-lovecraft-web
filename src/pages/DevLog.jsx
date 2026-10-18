@@ -58,10 +58,28 @@ export default function DevLog() {
       decision: "Representación dinámica de la estructura real de componentes con nodos colapsables.",
       detalle: "Se construyó un componente recursivo con estados independientes que permite contraer y desplegar las ramas del árbol de React para inspeccionar la jerarquía visual de la aplicación entregada.",
       responsables: "Rubén Basconcelo"
+    },
+    {
+      id: 7,
+      fecha: "Fase 7 · Assets & Consistencia",
+      fase: "Assets & Paridad",
+      titulo: "Normalización de recursos visuales y paridad cross-platform",
+      decision: "Centralización y estandarización estricta de rutas de recursos estáticos en public/img.",
+      detalle: "Se resolvieron discrepancias de visualización entre localhost (Windows case-insensitive) y producción en Vercel (Linux case-sensitive) generadas por mayúsculas/minúsculas en avatares y música. Se forzó la sincronización del árbol de trabajo en Git y la limpieza de caché interna en Vite (--force).",
+      responsables: "Sergio Pasini & Rubén Basconcelo"
+    },
+    {
+      id: 8,
+      fecha: "Fase 8 · Estabilidad del DOM & UX",
+      fase: "Estabilidad & DOM",
+      titulo: "Blindaje del Virtual DOM contra traductores y refactor de Biblioteca",
+      decision: "Protección integral contra interferencias externas del navegador y conmutación reactiva de sinopsis.",
+      detalle: "Se neutralizó el error 'removeChild' en React provocado por traductores automáticos (Google Translate) mediante el atributo translate='no' y metaetiquetas en index.html, además del encapsulamiento de nodos de texto condicionales en ApiSection.jsx. Se implementó alternancia directa de estado para las sinopsis bibliográficas.",
+      responsables: "Sergio Pasini"
     }
   ];
 
-  const fases = ['Todas', 'Organización', 'Arquitectura', 'Componentes', 'Datos Locales', 'API Pública'];
+  const fases = ['Todas', 'Organización', 'Arquitectura', 'Componentes', 'Datos Locales', 'API Pública', 'Assets & Paridad', 'Estabilidad & DOM'];
 
   const filteredLogs = filterPhase === 'Todas' 
     ? logs 
@@ -84,7 +102,7 @@ export default function DevLog() {
         </p>
       </header>
 
-      {/* Filtros funcionales por fase de desarrollo (Criterio 14 Propone) */}
+      {/* Filtros funcionales por fase de desarrollo */}
       <div style={{ display: 'flex', gap: '0.5rem', flexWrap: 'wrap', marginBottom: '2rem' }}>
         {fases.map(fase => (
           <button
@@ -153,10 +171,10 @@ export default function DevLog() {
                 <div style={{ 
                   padding: '0 1.2rem 1.2rem 1.2rem', 
                   borderTop: '1px solid var(--border-color)', 
-                  paddingTop: '1rem',
-                  fontSize: '0.88rem',
-                  color: '#c9d1d9',
-                  lineHeight: '1.6'
+                  paddingTop: '1rem', 
+                  fontSize: '0.88rem', 
+                  color: '#c9d1d9', 
+                  lineHeight: '1.6' 
                 }}>
                   <p><strong>Decisión clave:</strong> {log.decision}</p>
                   <p style={{ marginTop: '0.5rem' }}><strong>Detalle técnico:</strong> {log.detalle}</p>
