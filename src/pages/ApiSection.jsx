@@ -6,7 +6,7 @@ export default function ApiSection() {
   const [error, setError] = useState(null);
   const [inspectedCard, setInspectedCard] = useState(null);
 
-  const getBookSynopsis = (title) => {
+  const getBookSynopsis = (title = '') => {
     const t = title.toLowerCase();
     if (t.includes('cthulhu')) return "Relato fundacional del horror cósmico. Una investigación médica y arqueológica desentraña la existencia de un culto global que rinde tributo a una deidad antediluviana sumergida en el océano Pacífico.";
     if (t.includes('necronomicon')) return "Tratado prohibido atribuido al árabe loco Abdul Alhazred. Contiene fórmulas y advertencias sobre los Dioses Exteriores que aguardan en los umbrales de nuestra percepción sensorial.";
@@ -31,7 +31,7 @@ export default function ApiSection() {
       }
 
       const data = await response.json();
-      setBooks(data.docs || []);
+      setBooks(Array.isArray(data.docs) ? data.docs : []);
     } catch (err) {
       setError(err.message || 'No se pudo conectar con el archivo bibliográfico.');
     } finally {
@@ -44,11 +44,11 @@ export default function ApiSection() {
   }, []);
 
   const toggleInspect = (id) => {
-    setInspectedCard(inspectedCard === id ? null : id);
+    setInspectedCard((prev) => (prev === id ? null : id));
   };
 
   return (
-    <section>
+    <section translate="no" className="notranslate">
       <header style={{ marginBottom: '2.5rem' }}>
         <span style={{ fontSize: '0.75rem', color: 'var(--accent-copper-bright)', letterSpacing: '2px', textTransform: 'uppercase' }}>
           Conexión Externa en Vivo · Criterio 12
@@ -63,6 +63,7 @@ export default function ApiSection() {
       {/* Botón de sincronización */}
       <div style={{ marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
         <button
+          type="button"
           onClick={fetchLibraryData}
           disabled={loading}
           style={{
@@ -78,7 +79,7 @@ export default function ApiSection() {
             letterSpacing: '0.5px'
           }}
         >
-          {loading ? 'Consultando archivos...' : 'Sincronizar con Open Library ↻'}
+          <span>{loading ? 'Consultando archivos...' : 'Sincronizar con Open Library ↻'}</span>
         </button>
         <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
           Sin claves privadas requeridas · Consulta asíncrona
@@ -89,10 +90,10 @@ export default function ApiSection() {
       {loading && (
         <div className="archive-card" style={{ padding: '3.5rem', textAlign: 'center' }}>
           <p style={{ color: 'var(--accent-copper-bright)', fontSize: '1.2rem', fontFamily: 'var(--font-lore)', fontStyle: 'italic' }}>
-            Desempolvando tomos en los anaqueles de Providence...
+            <span>Desempolvando tomos en los anaqueles de Providence...</span>
           </p>
           <small style={{ color: 'var(--text-muted)', display: 'block', marginTop: '0.5rem' }}>
-            Recuperando registros bibliográficos remotos
+            <span>Recuperando registros bibliográficos remotos</span>
           </small>
         </div>
       )}
@@ -109,6 +110,7 @@ export default function ApiSection() {
           <h3 style={{ margin: '0 0 0.5rem 0' }}>Falla en la transmisión del registro</h3>
           <p style={{ margin: '0.5rem 0', fontSize: '0.9rem' }}>{error}</p>
           <button
+            type="button"
             onClick={fetchLibraryData}
             style={{
               marginTop: '0.75rem',
@@ -121,16 +123,16 @@ export default function ApiSection() {
               fontWeight: 'bold'
             }}
           >
-            Reintentar conexión
+            <span>Reintentar conexión</span>
           </button>
         </div>
       )}
 
-      {/* Estado 3: Resultados interactivos */}
+      {/* Estado 3: Resultados */}
       {!loading && !error && (
         <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '1.75rem' }}>
           {books.map((book, idx) => {
-            const cardId = book.key || idx;
+            const cardId = book.key || `book-${idx}`;
             const isInspecting = inspectedCard === cardId;
 
             return (
@@ -146,7 +148,7 @@ export default function ApiSection() {
                 }}
               >
                 {!isInspecting ? (
-                  /* VISTA FRENTE: Portada e imprenta */
+                  /* VISTA FRENTE */
                   <div style={{ display: 'flex', gap: '1.2rem', alignItems: 'flex-start' }}>
                     <img
                       src={
@@ -154,7 +156,7 @@ export default function ApiSection() {
                           ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg` 
                           : 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=150&auto=format&fit=crop&q=80'
                       }
-                      alt={book.title}
+                      alt={book.title || 'Libro de Lovecraft'}
                       style={{
                         width: '85px',
                         height: '130px',
@@ -169,43 +171,43 @@ export default function ApiSection() {
                     <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
                       <div>
                         <span style={{ fontSize: '0.7rem', color: 'var(--accent-copper)', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                          Edición: {book.first_publish_year || 'Año desconocido'}
+                          Edición: {book.first_publish_year ? String(book.first_publish_year) : 'Año desconocido'}
                         </span>
                         <h3 style={{ margin: '0.3rem 0', fontSize: '1.1rem', color: 'var(--text-paper)' }}>
-                          {book.title}
+                          {book.title || 'Manuscrito sin título'}
                         </h3>
                         <p style={{ fontSize: '0.8rem', color: 'var(--text-paper-dim)' }}>
-                          {book.author_name ? book.author_name.slice(0, 2).join(', ') : 'H. P. Lovecraft'}
+                          {Array.isArray(book.author_name) ? book.author_name.slice(0, 2).join(', ') : 'H. P. Lovecraft'}
                         </p>
                       </div>
 
                       <div style={{ marginTop: '0.75rem', fontSize: '0.72rem', color: 'var(--text-muted)' }}>
-                        <p>Publicaciones: {book.edition_count || 1}</p>
+                        <p style={{ margin: 0 }}>Publicaciones: {book.edition_count ? String(book.edition_count) : '1'}</p>
                       </div>
                     </div>
                   </div>
                 ) : (
-                  /* VISTA REVERSO: Sinopsis de archivo */
+                  /* VISTA REVERSO */
                   <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', flex: 1 }}>
                     <div>
                       <span style={{ fontSize: '0.7rem', color: 'var(--accent-copper-bright)', letterSpacing: '1.5px', textTransform: 'uppercase' }}>
                         EXPEDIENTE BIBLIOGRÁFICO
                       </span>
                       <h4 style={{ fontSize: '1.05rem', color: 'var(--text-paper)', margin: '0.3rem 0' }}>
-                        {book.title}
+                        {book.title || 'Manuscrito sin título'}
                       </h4>
                       <p style={{ fontSize: '0.85rem', color: 'var(--text-paper-dim)', fontFamily: 'var(--font-lore)', fontStyle: 'italic', lineHeight: '1.6', marginTop: '0.5rem' }}>
-                        "{getBookSynopsis(book.title)}"
+                        <span>“{getBookSynopsis(book.title)}”</span>
                       </p>
                     </div>
 
                     <div style={{ marginTop: '0.75rem', fontSize: '0.75rem', color: 'var(--text-muted)', borderTop: '1px solid var(--border-subtle)', paddingTop: '0.5rem' }}>
-                      Idiomas registrados: {book.language ? book.language.slice(0, 3).join(', ') : 'Inglés'}
+                      Idiomas registrados: {Array.isArray(book.language) ? book.language.slice(0, 3).join(', ') : 'Inglés'}
                     </div>
                   </div>
                 )}
 
-                {/* Botón interactivo de alternancia */}
+                {/* Botón de alternancia */}
                 <div style={{ marginTop: '1rem', borderTop: '1px solid var(--border-subtle)', paddingTop: '0.75rem' }}>
                   <button
                     type="button"
@@ -224,7 +226,9 @@ export default function ApiSection() {
                       letterSpacing: '0.5px'
                     }}
                   >
-                    {isInspecting ? '← Volver a la portada' : 'Leer sinopsis de archivo ↗'}
+                    <span>
+                      {isInspecting ? '← Volver a la portada' : 'Leer sinopsis de archivo ↗'}
+                    </span>
                   </button>
                 </div>
               </article>
