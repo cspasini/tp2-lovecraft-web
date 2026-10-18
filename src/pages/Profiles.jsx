@@ -12,7 +12,7 @@ export default function Profiles() {
       quote: "Investigar también es aprender a mirar aquello que otros pasan por alto.",
       githubUrl: "https://github.com/VaskoVegan",
       portfolioUrl: "https://pfo1-frontend-basconcelo.vercel.app/",
-      avatarUrl: "/img/avatares/Avatar01.jpg",
+      avatarUrl: "/img/avatares/avatar01.jpg",
       skills: ["Batería / Drummer", "Creatividad", "Investigación", "Trabajo en equipo"],
       movies: [
         { title: "El club de la pelea", year: "1999", img: "/img/cine/ruben-club-pelea.jpg", desc: "Identidad, violencia y deconstrucción del individuo." },
@@ -47,7 +47,7 @@ export default function Profiles() {
       quote: "Observar con método también es una forma de descubrir.",
       githubUrl: "https://github.com/cspasini",
       portfolioUrl: "https://pf1-frontend-pasini-cabello.vercel.app/",
-      avatarUrl: "/img/avatares/Avatar02.jpg",
+      avatarUrl: "/img/avatares/avatar02.jpg",
       skills: ["Análisis y resolución", "Datos y pensamiento analítico", "Metodología científica", "Química computacional / IA"],
       movies: [
         { title: "Mulholland Drive", year: "2001", img: "/img/cine/sergio-mulholland-drive.jpg", desc: "Misterio, identidades duplicadas y laberintos oníricos." },
@@ -80,7 +80,7 @@ export default function Profiles() {
       quote: "La ausencia de evidencia no es evidencia de ausencia.",
       githubUrl: "https://github.com/MichiBBQ",
       portfolioUrl: "https://pfo1paezhorvathjuan-sable.vercel.app/",
-      avatarUrl: "/img/avatares/Avatar03.png",
+      avatarUrl: "/img/avatares/avatar03.png",
       skills: ["Pensamiento Divergente", "Rehabilitación Física", "Aprendizaje Metódico", "Creatividad Informática"],
       movies: [
         { title: "El Día de la Bestia", year: "1995", img: "/img/cine/juanse-bestia.png", desc: "Símbolos oscuros y comedia negra apocalíptica." },
@@ -115,7 +115,7 @@ export default function Profiles() {
       quote: "Mi objetivo es que el conocimiento fluya tan bien como el código.",
       githubUrl: "https://github.com/alvarogmam",
       portfolioUrl: "https://alvaromamani-portfolio.vercel.app",
-      avatarUrl: "/img/avatares/Avatar04.jpeg",
+      avatarUrl: "/img/avatares/avatar04.jpeg",
       skills: ["Adaptabilidad", "Gestión de tiempo", "Creatividad aplicada", "Empatía profesional"],
       movies: [
         { title: "War Horse", year: "2011", img: "/img/cine/alvaro-war-horse.jpg", desc: "Resistencia y humanidad en medio del conflicto bélico." },
@@ -124,7 +124,7 @@ export default function Profiles() {
       ],
       music: [
         { title: "Ultimo", album: "Live Stadi 2024", img: "/img/musica/ultimo-iive.jpg", desc: "Cantautor italiano contemporáneo y fuerza de estadio." },
-        { title: "Guitarricadelafuente", album: "Spanish Leather", img: "/img/musica/Guitarricadelafuente.jpg", desc: "Folclore mediterráneo cruzado con electrónica tenue." },
+        { title: "Guitarricadelafuente", album: "Spanish Leather", img: "/img/musica/guitarricadelafuente.jpg", desc: "Folclore mediterráneo cruzado con electrónica tenue." },
         { title: "Andrés Calamaro", album: "Alta Suciedad", img: "/img/musica/alta-suciedad.jpg", desc: "Hito del cancionero en español y lírica punzante." }
       ],
       interactionTitle: "04 / Susurros del Vacío Cósmico",
