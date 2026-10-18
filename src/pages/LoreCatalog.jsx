@@ -40,7 +40,7 @@ export default function LoreCatalog() {
         </p>
       </header>
 
-      {/* Controles: Buscador y Filtros */}
+      {/* Buscador y Filtros */}
       <div className="archive-card" style={{ marginBottom: '2rem', display: 'flex', flexDirection: 'column', gap: '1.25rem' }}>
         <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap', alignItems: 'center' }}>
           <input
@@ -132,20 +132,11 @@ export default function LoreCatalog() {
                 style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}
               >
                 <div>
-                  {/* Imagen del espécimen / tomo */}
-                  <div style={{ width: '100%', height: '160px', borderRadius: '4px', overflow: 'hidden', marginBottom: '1rem', border: '1px solid var(--border-copper)' }}>
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      style={{ width: '100%', height: '100%', objectFit: 'cover', filter: 'sepia(30%) contrast(110%)' }}
-                    />
-                  </div>
-
-                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.4rem' }}>
-                    <span style={{ fontSize: '0.7rem', color: 'var(--accent-copper-bright)', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                  <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.5rem' }}>
+                    <span style={{ fontSize: '0.72rem', color: 'var(--accent-copper-bright)', textTransform: 'uppercase', letterSpacing: '1px' }}>
                       {item.category}
                     </span>
-                    <span style={{ fontSize: '0.7rem', color: '#f85149', background: 'rgba(248, 81, 73, 0.1)', padding: '0.1rem 0.4rem', borderRadius: '3px' }}>
+                    <span style={{ fontSize: '0.7rem', color: '#f85149', background: 'rgba(248, 81, 73, 0.1)', padding: '0.15rem 0.45rem', borderRadius: '3px' }}>
                       {item.threatLevel}
                     </span>
                   </div>
@@ -157,13 +148,12 @@ export default function LoreCatalog() {
                     📍 <strong>Origen:</strong> {item.origin}
                   </p>
 
-                  <p style={{ fontSize: '0.85rem', color: 'var(--text-paper)', lineHeight: '1.5' }}>
+                  <p style={{ fontSize: '0.85rem', color: 'var(--text-paper)', lineHeight: '1.6' }}>
                     {item.description}
                   </p>
                 </div>
 
-                {/* Acordeón de nota histórica */}
-                <div style={{ marginTop: '1rem', borderTop: '1px solid var(--border-subtle)', paddingTop: '0.75rem' }}>
+                <div style={{ marginTop: '1.25rem', borderTop: '1px solid var(--border-subtle)', paddingTop: '0.75rem' }}>
                   <button
                     onClick={() => toggleExpand(item.id)}
                     style={{
@@ -171,7 +161,7 @@ export default function LoreCatalog() {
                       border: 'none',
                       color: 'var(--accent-copper-bright)',
                       cursor: 'pointer',
-                      fontSize: '0.78rem',
+                      fontSize: '0.8rem',
                       display: 'flex',
                       alignItems: 'center',
                       gap: '0.4rem',
@@ -182,7 +172,7 @@ export default function LoreCatalog() {
                   </button>
 
                   {isOpen && (
-                    <div style={{ marginTop: '0.6rem', padding: '0.6rem', background: 'var(--bg-ink)', borderRadius: '4px', borderLeft: '2px solid var(--accent-copper)', fontSize: '0.8rem', fontStyle: 'italic', color: 'var(--text-paper-dim)' }}>
+                    <div style={{ marginTop: '0.65rem', padding: '0.65rem', background: 'var(--bg-ink)', borderRadius: '4px', borderLeft: '2px solid var(--accent-copper)', fontSize: '0.8rem', fontStyle: 'italic', color: 'var(--text-paper-dim)', lineHeight: '1.5' }}>
                       📜 {item.historicalNote}
                     </div>
                   )}

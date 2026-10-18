@@ -4,8 +4,19 @@ export default function ApiSection() {
   const [books, setBooks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  const [inspectedCard, setInspectedCard] = useState(null);
 
-  // Consulta a la API pública de Open Library
+  const getBookSynopsis = (title) => {
+    const t = title.toLowerCase();
+    if (t.includes('cthulhu')) return "Relato fundacional del horror cósmico. Una investigación médica y arqueológica desentraña la existencia de un culto global que rinde tributo a una deidad antediluviana sumergida en el océano Pacífico.";
+    if (t.includes('necronomicon')) return "Tratado prohibido atribuido al árabe loco Abdul Alhazred. Contiene fórmulas y advertencias sobre los Dioses Exteriores que aguardan en los umbrales de nuestra percepción sensorial.";
+    if (t.includes('dunwich')) return "En una apartada aldea rural de Massachusetts, la familia Whateley cría a una entidad híbrida invisible que amenaza con abrir las puertas a seres extraterrenales.";
+    if (t.includes('innsmouth')) return "Un viajero llega al decrépito puerto de Innsmouth, descubriendo un siniestro pacto biológico y religioso entre sus pobladores y criaturas de las profundidades marinas.";
+    if (t.includes('mountains') || t.includes('madness')) return "Crónica de la expedición científica de la Universidad de Miskatonic a la Antártida, donde hallan una ciudad fósil construida por entidades estelares antes del origen del hombre.";
+    if (t.includes('shadow')) return "Investigación sobre el canje involuntario de mentes humanas a través del tiempo por una civilización cónica prehistórica conocida como la Gran Raza de Yith.";
+    return "Manuscrito literario clasificado por la Universidad de Miskatonic. Explora la fragilidad de la razón humana frente a los enigmas y leyes desconocidas del cosmos.";
+  };
+
   const fetchLibraryData = async () => {
     setLoading(true);
     setError(null);
@@ -32,6 +43,10 @@ export default function ApiSection() {
     fetchLibraryData();
   }, []);
 
+  const toggleInspect = (id) => {
+    setInspectedCard(inspectedCard === id ? null : id);
+  };
+
   return (
     <section>
       <header style={{ marginBottom: '2.5rem' }}>
@@ -40,13 +55,12 @@ export default function ApiSection() {
         </span>
         <h2 style={{ fontSize: '2.2rem', margin: '0.5rem 0' }}>Biblioteca de la Universidad de Miskatonic</h2>
         <p style={{ color: 'var(--text-paper-dim)', maxWidth: '750px', lineHeight: '1.6' }}>
-          Esta sección consulta en tiempo real la <strong>API pública de Open Library</strong>. 
-          Aporta un catálogo dinámico y verificado de publicaciones literarias de H. P. Lovecraft preservadas en archivos abiertos, 
-          permitiendo contrastar los relatos del mito con los registros editoriales históricos del mundo real.
+          Catálogo en vivo sincronizado con la <strong>API de Open Library</strong>. 
+          Hacé clic en <strong>"Leer sinopsis"</strong> en cualquier tomo para alternar entre la ficha editorial y la reseña clasificada del relato.
         </p>
       </header>
 
-      {/* Botón de recarga / reintento (Nivel Propone) */}
+      {/* Botón de sincronización */}
       <div style={{ marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
         <button
           onClick={fetchLibraryData}
@@ -67,15 +81,15 @@ export default function ApiSection() {
           {loading ? 'Consultando archivos...' : 'Sincronizar con Open Library ↻'}
         </button>
         <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>
-          Sin claves privadas requeridas · Catálogo Abierto
+          Sin claves privadas requeridas · Consulta asíncrona
         </span>
       </div>
 
       {/* Estado 1: Carga */}
       {loading && (
-        <div className="archive-card" style={{ padding: '3rem', textAlign: 'center' }}>
-          <p style={{ color: 'var(--accent-copper-bright)', fontSize: '1.15rem', fontFamily: 'var(--font-lore)', fontStyle: 'italic' }}>
-            Desempolvando tomos en los estantes de Providence...
+        <div className="archive-card" style={{ padding: '3.5rem', textAlign: 'center' }}>
+          <p style={{ color: 'var(--accent-copper-bright)', fontSize: '1.2rem', fontFamily: 'var(--font-lore)', fontStyle: 'italic' }}>
+            Desempolvando tomos en los anaqueles de Providence...
           </p>
           <small style={{ color: 'var(--text-muted)', display: 'block', marginTop: '0.5rem' }}>
             Recuperando registros bibliográficos remotos
@@ -112,58 +126,110 @@ export default function ApiSection() {
         </div>
       )}
 
-      {/* Estado 3: Resultados */}
+      {/* Estado 3: Resultados interactivos */}
       {!loading && !error && (
-        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '1.5rem' }}>
-          {books.map((book, idx) => (
-            <article
-              key={book.key || idx}
-              className="archive-card"
-              style={{
-                display: 'flex',
-                gap: '1rem',
-                flexDirection: 'row',
-                alignItems: 'flex-start'
-              }}
-            >
-              <img
-                src={
-                  book.cover_i 
-                    ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg` 
-                    : 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=150&auto=format&fit=crop&q=80'
-                }
-                alt={book.title}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(320px, 1fr))', gap: '1.75rem' }}>
+          {books.map((book, idx) => {
+            const cardId = book.key || idx;
+            const isInspecting = inspectedCard === cardId;
+
+            return (
+              <article
+                key={cardId}
+                className="archive-card"
                 style={{
-                  width: '85px',
-                  height: '120px',
-                  objectFit: 'cover',
-                  borderRadius: '4px',
-                  border: '1px solid var(--border-copper)',
-                  background: 'var(--bg-ink)',
-                  flexShrink: 0
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'space-between',
+                  minHeight: '230px',
+                  border: isInspecting ? '1px solid var(--accent-copper-bright)' : '1px solid var(--border-copper)'
                 }}
-              />
-              <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between', minHeight: '120px' }}>
-                <div>
-                  <span style={{ fontSize: '0.7rem', color: 'var(--accent-copper)', textTransform: 'uppercase', letterSpacing: '1px' }}>
-                    Edición: {book.first_publish_year || 'Año desconocido'}
-                  </span>
-                  <h3 style={{ margin: '0.3rem 0', fontSize: '1.05rem', color: 'var(--text-paper)' }}>
-                    {book.title}
-                  </h3>
-                  <p style={{ fontSize: '0.8rem', color: 'var(--text-paper-dim)' }}>
-                    Autor: {book.author_name ? book.author_name.slice(0, 2).join(', ') : 'H. P. Lovecraft'}
-                  </p>
+              >
+                {!isInspecting ? (
+                  /* VISTA FRENTE: Portada e imprenta */
+                  <div style={{ display: 'flex', gap: '1.2rem', alignItems: 'flex-start' }}>
+                    <img
+                      src={
+                        book.cover_i 
+                          ? `https://covers.openlibrary.org/b/id/${book.cover_i}-M.jpg` 
+                          : 'https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=150&auto=format&fit=crop&q=80'
+                      }
+                      alt={book.title}
+                      style={{
+                        width: '85px',
+                        height: '130px',
+                        objectFit: 'cover',
+                        borderRadius: '4px',
+                        border: '1px solid var(--border-copper)',
+                        background: 'var(--bg-ink)',
+                        flexShrink: 0
+                      }}
+                    />
+
+                    <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+                      <div>
+                        <span style={{ fontSize: '0.7rem', color: 'var(--accent-copper)', textTransform: 'uppercase', letterSpacing: '1px' }}>
+                          Edición: {book.first_publish_year || 'Año desconocido'}
+                        </span>
+                        <h3 style={{ margin: '0.3rem 0', fontSize: '1.1rem', color: 'var(--text-paper)' }}>
+                          {book.title}
+                        </h3>
+                        <p style={{ fontSize: '0.8rem', color: 'var(--text-paper-dim)' }}>
+                          {book.author_name ? book.author_name.slice(0, 2).join(', ') : 'H. P. Lovecraft'}
+                        </p>
+                      </div>
+
+                      <div style={{ marginTop: '0.75rem', fontSize: '0.72rem', color: 'var(--text-muted)' }}>
+                        <p>Publicaciones: {book.edition_count || 1}</p>
+                      </div>
+                    </div>
+                  </div>
+                ) : (
+                  /* VISTA REVERSO: Sinopsis de archivo */
+                  <div style={{ display: 'flex', flexDirection: 'column', justifyContent: 'space-between', flex: 1 }}>
+                    <div>
+                      <span style={{ fontSize: '0.7rem', color: 'var(--accent-copper-bright)', letterSpacing: '1.5px', textTransform: 'uppercase' }}>
+                        EXPEDIENTE BIBLIOGRÁFICO
+                      </span>
+                      <h4 style={{ fontSize: '1.05rem', color: 'var(--text-paper)', margin: '0.3rem 0' }}>
+                        {book.title}
+                      </h4>
+                      <p style={{ fontSize: '0.85rem', color: 'var(--text-paper-dim)', fontFamily: 'var(--font-lore)', fontStyle: 'italic', lineHeight: '1.6', marginTop: '0.5rem' }}>
+                        "{getBookSynopsis(book.title)}"
+                      </p>
+                    </div>
+
+                    <div style={{ marginTop: '0.75rem', fontSize: '0.75rem', color: 'var(--text-muted)', borderTop: '1px solid var(--border-subtle)', paddingTop: '0.5rem' }}>
+                      Idiomas registrados: {book.language ? book.language.slice(0, 3).join(', ') : 'Inglés'}
+                    </div>
+                  </div>
+                )}
+
+                {/* Botón interactivo de alternancia */}
+                <div style={{ marginTop: '1rem', borderTop: '1px solid var(--border-subtle)', paddingTop: '0.75rem' }}>
+                  <button
+                    type="button"
+                    onClick={() => toggleInspect(cardId)}
+                    style={{
+                      width: '100%',
+                      padding: '0.45rem',
+                      background: isInspecting ? 'var(--bg-soft)' : 'rgba(193, 137, 89, 0.15)',
+                      border: '1px solid var(--accent-copper)',
+                      color: 'var(--accent-copper-bright)',
+                      borderRadius: '4px',
+                      cursor: 'pointer',
+                      fontSize: '0.78rem',
+                      fontWeight: 'bold',
+                      fontFamily: 'var(--font-display)',
+                      letterSpacing: '0.5px'
+                    }}
+                  >
+                    {isInspecting ? '← Volver a la portada' : 'Leer sinopsis de archivo ↗'}
+                  </button>
                 </div>
-                <div style={{ marginTop: '0.75rem', fontSize: '0.72rem', color: 'var(--text-muted)', borderTop: '1px solid var(--border-subtle)', paddingTop: '0.4rem' }}>
-                  <p>Publicaciones: {book.edition_count || 1}</p>
-                  {book.language && (
-                    <p>Idiomas: {book.language.slice(0, 3).join(', ')}</p>
-                  )}
-                </div>
-              </div>
-            </article>
-          ))}
+              </article>
+            );
+          })}
         </div>
       )}
     </section>

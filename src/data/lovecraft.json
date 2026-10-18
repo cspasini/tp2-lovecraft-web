@@ -5,8 +5,7 @@
     "category": "Primigenio",
     "origin": "R'lyeh",
     "threatLevel": "Cataclísmico",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cf/Cthulhu_sketch_by_Lovecraft.jpg/440px-Cthulhu_sketch_by_Lovecraft.jpg",
-    "description": "Entidad cósmica de tamaño ciclópeo con rasgos combinados de cefalópodo, dragón y forma antropomorfa. Yace en letargo hipnótico dentro de la ciudad sumergida de R'lyeh, comunicándose mediante pulsos telepáticos con mentes sensibles en la superficie.",
+    "description": "Entidad cósmica ciclópea con rasgos de cefalópodo, dragón y forma antropomorfa. Yace en letargo hipnótico en la ciudad sumergida de R'lyeh, comunicándose mediante pulsos telepáticos con mentes sensibles.",
     "historicalNote": "Descrito por primera vez en el manuscrito de Francis Wayland Thurston fechado en 1928."
   },
   {
@@ -15,8 +14,7 @@
     "category": "Grimorio",
     "origin": "Damasco / Abdul Alhazred",
     "threatLevel": "Corruptor Mental",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Book_of_the_Law_manuscript.jpg/400px-Book_of_the_Law_manuscript.jpg",
-    "description": "El grimorio definitivo de saberes blasfemos y fórmulas de invocación arcana. Encuadernado y traducido clandestinamente al griego y latín; su mera lectura fragmentaria induce cuadros agudos de locura, degradación celular y desvanecimiento de la cordura.",
+    "description": "El grimorio definitivo de saberes blasfemos y fórmulas de invocación. Encuadernado y traducido clandestinamente; su lectura induce cuadros agudos de locura y degradación de la cordura.",
     "historicalNote": "Se preserva un ejemplar restringido bajo llave en las bóvedas de la Universidad de Miskatonic."
   },
   {
@@ -25,8 +23,7 @@
     "category": "Dios Exterior",
     "origin": "El Caos Primordial",
     "threatLevel": "Extinción Inminente",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Nyarlathotep_silhouette.png/400px-Nyarlathotep_silhouette.png",
-    "description": "Conocido como el 'Caos Reptante' o el Faraón Negro. A diferencia de otros dioses que duermen o habitan dimensiones lejanas, Nyarlathotep camina entre la humanidad adoptando mil formas, manipulando los avances tecnológicos para precipitar el colapso.",
+    "description": "Conocido como el 'Caos Reptante' o el Faraón Negro. Camina entre la humanidad adoptando mil formas, manipulando los avances tecnológicos para precipitar el colapso de la civilización.",
     "historicalNote": "Documentado en expedientes arqueológicos del Valle de los Reyes en El Cairo."
   },
   {
@@ -35,8 +32,7 @@
     "category": "Criatura",
     "origin": "Innsmouth / Arrecife del Diablo",
     "threatLevel": "Alto",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Deep_one_sculpture.jpg/400px-Deep_one_sculpture.jpg",
-    "description": "Raza humanoide-ictínea que habita las profundidades abisales del océano. Biológicamente inmortales a menos que sufran muerte violenta; establecieron pactos reproductivos y de culto con los pobladores de Innsmouth a cambio de pesca abundante y oro arcaico.",
+    "description": "Raza humanoide-ictínea que habita las profundidades marinas. Biológicamente inmortales a menos que sufran muerte violenta; establecieron pactos reproductivos y de culto con los pobladores de Innsmouth.",
     "historicalNote": "Investigación federal y redada naval sobre Innsmouth en el invierno de 1927."
   },
   {
@@ -45,8 +41,7 @@
     "category": "Criatura",
     "origin": "Antártida (Meseta de Leng)",
     "threatLevel": "Devastador",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/18/Shoggoth_drawing.jpg/440px-Shoggoth_drawing.jpg",
-    "description": "Masas protoplasmáticas amorfas de viscosidad gelatinosa, capaces de generar órganos, ojos y miembros según su necesidad. Fueron concebidos por los Antiguos como mano de obra esclava antes de rebelarse violentamente contra sus creadores.",
+    "description": "Masas protoplasmáticas amorfas de viscosidad gelatinosa, capaces de generar órganos y miembros según su necesidad. Fueron concebidos por los Antiguos como mano de obra esclava antes de rebelarse.",
     "historicalNote": "Hallados en los túneles subterráneos de la expedición antártica de Miskatonic en 1930."
   },
   {
@@ -55,8 +50,7 @@
     "category": "Grimorio",
     "origin": "Praga / Ludvig Prinn",
     "threatLevel": "Peligro Arcano",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Occult_book_engraving.jpg/400px-Occult_book_engraving.jpg",
-    "description": "'Los Misterios del Gusano'. Tratado escrito por el hechicero Ludvig Prinn antes de ser ejecutado por la Inquisición. Contiene secretos sobre la nigromancia egipcia y la invocación de entidades invisibles mediante sacrificios de sangre.",
+    "description": "'Los Misterios del Gusano'. Tratado escrito por Ludvig Prinn antes de ser ejecutado por la Inquisición. Contiene secretos sobre la nigromancia y la invocación de entidades invisibles.",
     "historicalNote": "Copia catalogada bajo estricta cuarentena en la Biblioteca Nacional de Francia."
   },
   {
@@ -65,8 +59,7 @@
     "category": "Dios Exterior",
     "origin": "El Continuo Espacio-Temporal",
     "threatLevel": "Cosmológico",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Cosmic_spheres_illustration.jpg/440px-Cosmic_spheres_illustration.jpg",
-    "description": "La llave, el guardián de la puerta y la puerta misma. Se manifiesta como una aglomeración de esferas irisadas en constante ebullición. Yog-Sothoth existe en todo el tiempo y espacio simultáneamente, conociendo el pasado, el presente y lo venidero.",
+    "description": "La llave, el guardián de la puerta y la puerta misma. Se manifiesta como una aglomeración de esferas irisadas. Existe en todo el tiempo y espacio de manera simultánea.",
     "historicalNote": "Involucrado en los acontecimientos del Horror de Dunwich en 1928."
   },
   {
@@ -75,8 +68,7 @@
     "category": "Criatura",
     "origin": "Espacio Profundo",
     "threatLevel": "Medio",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c2/Elder_Thing_fossil_sketch.jpg/400px-Elder_Thing_fossil_sketch.jpg",
-    "description": "Científicos estelares con torso en forma de barril, alas membranosas y apéndices tentaculares. Colonizaron la Tierra miles de millones de años antes del origen del hombre, erigiendo ciudades ciclópeas bajo los hielos de la Antártida.",
+    "description": "Científicos estelares con torso en forma de barril, alas membranosas y apéndices tentaculares. Colonizaron la Tierra millones de años antes del origen del ser humano.",
     "historicalNote": "Fósiles recuperados por el profesor William Dyer de la Universidad de Miskatonic."
   },
   {
@@ -85,8 +77,7 @@
     "category": "Artefacto",
     "origin": "Pantanos de Luisiana",
     "threatLevel": "Influencia Mental",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/Bas_relief_idol.jpg/400px-Bas_relief_idol.jpg",
-    "description": "Estatuilla tallada en piedra esteatita de color negro verdoso con vetas doradas, de material no catalogado en la corteza terrestre. Emite una ligera vibración táctil y un hedor rancio a fango marino cuando la marea sube.",
+    "description": "Estatuilla tallada en piedra esteatita de color negro verdoso, de material no catalogado en la corteza terrestre. Emite una ligera vibración táctil cuando la marea sube.",
     "historicalNote": "Confiscada por el inspector John Raymond Legrasse en la redada de 1907."
   },
   {
@@ -95,8 +86,7 @@
     "category": "Primigenio",
     "origin": "Fosa Oceánica del Pacífico",
     "threatLevel": "Catastrófico",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/Monolith_sea_creature.jpg/440px-Monolith_sea_creature.jpg",
-    "description": "Divinidad acuática y progenitor colosal de los Profundos. Se alza sobre monolitos esculpidos en islas emergidas por fallas tectónicas, exigiendo sacrificios marinos y guiando las migraciones submarinas hacia los continentes.",
+    "description": "Divinidad acuática y progenitor colosal de los Profundos. Se alza sobre monolitos esculpidos en islas emergidas por fallas tectónicas, exigiendo sacrificios marinos.",
     "historicalNote": "Avistado por un oficial naval náufrago durante la Primera Guerra Mundial."
   },
   {
@@ -105,8 +95,7 @@
     "category": "Entidad",
     "origin": "Espacio Interestelar",
     "threatLevel": "Degradación Biológica",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Meteorite_crater_glow.jpg/400px-Meteorite_crater_glow.jpg",
-    "description": "Entidad informe compuesta por un espectro cromático que no pertenece a ningún color conocido en la Tierra. Cayó en un aerolito cerca de Arkham, marchitando la vegetación, mutando el ganado y drenando la fuerza vital de toda materia orgánica.",
+    "description": "Entidad informe compuesta por un espectro cromático ajeno a la Tierra. Cayó en un aerolito cerca de Arkham, marchitando la vegetación y drenando la fuerza vital del entorno.",
     "historicalNote": "El área afectada se conoce en los archivos como 'El Erial Maldito'."
   },
   {
@@ -115,8 +104,7 @@
     "category": "Artefacto",
     "origin": "Yuggoth",
     "threatLevel": "Invocación de la Sombra",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Black_crystal_faceted.jpg/400px-Black_crystal_faceted.jpg",
-    "description": "Cristal negro asimétrico tallado en épocas previas a la creación de los continentes. Permite contemplar visiones de mundos distantes cuando se sumerge en la oscuridad; si se le priva de luz, invoca al 'Morador de las Tinieblas'.",
+    "description": "Cristal negro asimétrico tallado en épocas prehumanas. Permite contemplar visiones de mundos distantes; si se le priva por completo de luz, invoca al Morador de las Tinieblas.",
     "historicalNote": "Resguardado en la torre abandonada de la Iglesia de la Sabiduría Estelar en Providence."
   },
   {
@@ -125,8 +113,7 @@
     "category": "Criatura",
     "origin": "Túneles bajo Boston y París",
     "threatLevel": "Medio-Alto",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/Catacombs_skull_tunnel.jpg/400px-Catacombs_skull_tunnel.jpg",
-    "description": "Seres humanoides con facciones caninas, piel correosa y uñas endurecidas que habitan galerías de catacumbas y cementerios antiguos. Antiguos humanos degenerados por hábitos de canibalismo ritual prolongado durante generaciones.",
+    "description": "Seres humanoides con facciones caninas y piel correosa que habitan galerías de catacumbas y cementerios. Antiguos humanos degenerados por hábitos de canibalismo ritual.",
     "historicalNote": "Pintados en las telas hiperrealistas del artista desaparecido Richard Upton Pickman."
   },
   {
@@ -135,8 +122,7 @@
     "category": "Grimorio",
     "origin": "Francia / Conde d'Erlette",
     "threatLevel": "Prohibido",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Old_leather_grimoire.jpg/400px-Old_leather_grimoire.jpg",
-    "description": "Monografía francesa del siglo XVIII que detalla las sociedades secretas de necrófagos que operaban en las catacumbas de París y las fórmulas de preservación y resurrección de restos óseos.",
+    "description": "Monografía francesa del siglo XVIII que detalla las sociedades secretas de necrófagos que operaban en las catacumbas de París y las fórmulas de preservación de restos óseos.",
     "historicalNote": "Solo existen dos ejemplares conocidos tras la quema eclesiástica de 1737."
   },
   {
@@ -145,8 +131,7 @@
     "category": "Criatura",
     "origin": "Yuggoth (Plutón)",
     "threatLevel": "Extirpación Cerebral",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Crustacean_hybrid_fossil.jpg/400px-Crustacean_hybrid_fossil.jpg",
-    "description": "Organismos fúngicos rosados con pinzas de crustáceo y cabezas compuestas de anillos de antenas. Extraen minerales de las colinas de Vermont y son capaces de extirpar cerebros humanos vivos para almacenarlos en cilindros metálicos parlantes.",
+    "description": "Organismos fúngicos rosados con pinzas de crustáceo. Extraen minerales de las colinas de Vermont y pueden extirpar cerebros vivos para almacenarlos en cilindros metálicos parlantes.",
     "historicalNote": "Descubiertos en las colinas de Townshend durante las inundaciones de 1927."
   },
   {
@@ -155,8 +140,7 @@
     "category": "Grimorio",
     "origin": "Hiperbórea / Eibon",
     "threatLevel": "Saber Primordial",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5f/Ancient_scroll_parchment.jpg/400px-Ancient_scroll_parchment.jpg",
-    "description": "Texto antiquísimo atribuido al brujo hiperbóreo Eibon. Describe los ciclos del dios sapo Tsathoggua y las dimensiones heladas que antecedieron a la última glaciación de la Tierra.",
+    "description": "Texto antiquísimo atribuido al brujo hiperbóreo Eibon. Describe los ciclos del dios Tsathoggua y las dimensiones heladas que antecedieron a la última glaciación.",
     "historicalNote": "Manuscrito conservado en rollos de pergamino de piel de mastodonte."
   },
   {
@@ -165,8 +149,7 @@
     "category": "Criatura",
     "origin": "Xoth",
     "threatLevel": "Muy Alto",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Octopus_tentacles_dark.jpg/400px-Octopus_tentacles_dark.jpg",
-    "description": "Versiones menores pero igualmente letales de Cthulhu. Libraron guerras territoriales contra los Antiguos durante el Mesozoico antes de quedar sepultados bajo las aguas del Pacífico Sur.",
+    "description": "Versiones menores pero igualmente letales de Cthulhu. Libraron guerras territoriales contra los Antiguos durante el Mesozoico antes de quedar sepultados bajo las aguas.",
     "historicalNote": "Monitoreados por sonares oceanográficos de la Armada Argentina en la fosa de las Shetland."
   },
   {
@@ -175,8 +158,7 @@
     "category": "Grimorio",
     "origin": "La Gran Raza de Yith",
     "threatLevel": "Cronológico",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/Cuneiform_clay_tablet.jpg/400px-Cuneiform_clay_tablet.jpg",
-    "description": "Primer libro de filosofía oculta conocido en la historia humana. Traducido a partir de tablillas de arcilla conservadas en la ciudad perdida de Pnakotus, en el Gran Desierto Arenoso de Australia.",
+    "description": "Primer libro de filosofía oculta conocido en la historia humana. Traducido a partir de tablillas de arcilla conservadas en la ciudad perdida de Pnakotus, en Australia.",
     "historicalNote": "Contiene el registro de intercambio de mentes a través de eones cósmicos."
   },
   {
@@ -185,8 +167,7 @@
     "category": "Criatura",
     "origin": "Tierra Prehistórica / Yith",
     "threatLevel": "Desplazamiento Temporal",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4e/Cone_shaped_fossil.jpg/400px-Cone_shaped_fossil.jpg",
-    "description": "Seres cónicos de 3 metros de altura con cuatro apéndices superiores flexibles. Maestros del viaje temporal que proyectan sus conciencias a través del tiempo, ocupando cuerpos humanos contemporáneos para recopilar conocimiento enciclopédico.",
+    "description": "Seres cónicos de 3 metros de altura con apéndices flexibles. Proyectan sus conciencias a través del tiempo, ocupando cuerpos humanos contemporáneos para recopilar conocimiento.",
     "historicalNote": "Expedición del profesor Nathaniel Wingate Peaslee en 1935."
   },
   {
@@ -195,8 +176,7 @@
     "category": "Dios Exterior",
     "origin": "El Centro del Infinito",
     "threatLevel": "Aniquilación Cósmica",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Crab_Nebula.jpg/440px-Crab_Nebula.jpg",
-    "description": "El sultán demoníaco ciego y necio. Yace en el centro del cosmos rodeado de una corte de deidades menores que danzan al son de flautas y tambores arcanos para evitar que despierte y deshaga la realidad material en un instante.",
+    "description": "El sultán demoníaco ciego y necio. Yace en el centro del cosmos rodeado de deidades menores que danzan al son de flautas y tambores arcanos para evitar que despierte.",
     "historicalNote": "Referenciado como la fuente de toda entropía en las fórmulas de Alhazred."
   }
 ]
