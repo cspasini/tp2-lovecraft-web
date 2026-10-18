@@ -25,27 +25,14 @@ export default function Sidebar() {
           <span className="team-badge">Equipo TP2</span>
         </div>
 
-        <nav className="sidebar-nav">
-          <NavLink to="/" end onClick={closeSidebar}>
-            Inicio
-          </NavLink>
-          <NavLink to="/perfiles" onClick={closeSidebar}>
-            Integrantes
-          </NavLink>
-          <NavLink to="/catalogo" onClick={closeSidebar}>
-            Grimorio (JSON)
-          </NavLink>
-          <NavLink to="/api" onClick={closeSidebar}>
-            API Abismo
-          </NavLink>
-          <NavLink to="/arbol" onClick={closeSidebar}>
-            Árbol de Render
-          </NavLink>
-          <NavLink to="/bitacora" onClick={closeSidebar}>
-            Bitácora
-          </NavLink>
-        </nav>
-
+      <nav className="sidebar-nav">
+        <NavLink to="/" end onClick={closeSidebar}>Inicio</NavLink>
+        <NavLink to="/perfiles" onClick={closeSidebar}>Integrantes</NavLink>
+        <NavLink to="/catalogo" onClick={closeSidebar}>Grimorio (JSON)</NavLink>
+        <NavLink to="/api" onClick={closeSidebar}>API Abismo</NavLink>
+        <NavLink to="/arbol" onClick={closeSidebar}>Árbol de Render</NavLink>
+        <NavLink to="/bitacora" onClick={closeSidebar}>Bitácora</NavLink>
+      </nav>
         <div className="sidebar-footer">
           <small>IFTS N°29 - 2026</small>
         </div>
