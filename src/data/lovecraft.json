@@ -6,7 +6,8 @@
     "origin": "R'lyeh",
     "threatLevel": "Cataclísmico",
     "description": "Entidad cósmica ciclópea con rasgos de cefalópodo, dragón y forma antropomorfa. Yace en letargo hipnótico en la ciudad sumergida de R'lyeh, comunicándose mediante pulsos telepáticos con mentes sensibles.",
-    "historicalNote": "Descrito por primera vez en el manuscrito de Francis Wayland Thurston fechado en 1928."
+    "historicalNote": "Descrito por primera vez en el manuscrito de Francis Wayland Thurston fechado en 1928.",
+    "image": "/img/grimorio/cthulhu.jpg"
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "origin": "Damasco / Abdul Alhazred",
     "threatLevel": "Corruptor Mental",
     "description": "El grimorio definitivo de saberes blasfemos y fórmulas de invocación. Encuadernado y traducido clandestinamente; su lectura induce cuadros agudos de locura y degradación de la cordura.",
-    "historicalNote": "Se preserva un ejemplar restringido bajo llave en las bóvedas de la Universidad de Miskatonic."
+    "historicalNote": "Se preserva un ejemplar restringido bajo llave en las bóvedas de la Universidad de Miskatonic.",
+    "image": "/img/grimorio/necronomicon.jpg"
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "origin": "El Caos Primordial",
     "threatLevel": "Extinción Inminente",
     "description": "Conocido como el 'Caos Reptante' o el Faraón Negro. Camina entre la humanidad adoptando mil formas, manipulando los avances tecnológicos para precipitar el colapso de la civilización.",
-    "historicalNote": "Documentado en expedientes arqueológicos del Valle de los Reyes en El Cairo."
+    "historicalNote": "Documentado en expedientes arqueológicos del Valle de los Reyes en El Cairo.",
+    "image": "/img/grimorio/nyarlathotep.jpg"
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "origin": "Innsmouth / Arrecife del Diablo",
     "threatLevel": "Alto",
     "description": "Raza humanoide-ictínea que habita las profundidades marinas. Biológicamente inmortales a menos que sufran muerte violenta; establecieron pactos reproductivos y de culto con los pobladores de Innsmouth.",
-    "historicalNote": "Investigación federal y redada naval sobre Innsmouth en el invierno de 1927."
+    "historicalNote": "Investigación federal y redada naval sobre Innsmouth en el invierno de 1927.",
+    "image": "/img/grimorio/profundos.jpg"
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "origin": "Antártida (Meseta de Leng)",
     "threatLevel": "Devastador",
     "description": "Masas protoplasmáticas amorfas de viscosidad gelatinosa, capaces de generar órganos y miembros según su necesidad. Fueron concebidos por los Antiguos como mano de obra esclava antes de rebelarse.",
-    "historicalNote": "Hallados en los túneles subterráneos de la expedición antártica de Miskatonic en 1930."
+    "historicalNote": "Hallados en los túneles subterráneos de la expedición antártica de Miskatonic en 1930.",
+    "image": "/img/grimorio/shoggoth.jpg"
   },
   {
     "id": 6,
@@ -51,7 +56,8 @@
     "origin": "Praga / Ludvig Prinn",
     "threatLevel": "Peligro Arcano",
     "description": "'Los Misterios del Gusano'. Tratado escrito por Ludvig Prinn antes de ser ejecutado por la Inquisición. Contiene secretos sobre la nigromancia y la invocación de entidades invisibles.",
-    "historicalNote": "Copia catalogada bajo estricta cuarentena en la Biblioteca Nacional de Francia."
+    "historicalNote": "Copia catalogada bajo estricta cuarentena en la Biblioteca Nacional de Francia.",
+    "image": "/img/grimorio/de-vermis-mysteriis.jpg"
   },
   {
     "id": 7,
@@ -60,7 +66,8 @@
     "origin": "El Continuo Espacio-Temporal",
     "threatLevel": "Cosmológico",
     "description": "La llave, el guardián de la puerta y la puerta misma. Se manifiesta como una aglomeración de esferas irisadas. Existe en todo el tiempo y espacio de manera simultánea.",
-    "historicalNote": "Involucrado en los acontecimientos del Horror de Dunwich en 1928."
+    "historicalNote": "Involucrado en los acontecimientos del Horror de Dunwich en 1928.",
+    "image": "/img/grimorio/yog-sothoth.jpg"
   },
   {
     "id": 8,
@@ -69,7 +76,8 @@
     "origin": "Espacio Profundo",
     "threatLevel": "Medio",
     "description": "Científicos estelares con torso en forma de barril, alas membranosas y apéndices tentaculares. Colonizaron la Tierra millones de años antes del origen del ser humano.",
-    "historicalNote": "Fósiles recuperados por el profesor William Dyer de la Universidad de Miskatonic."
+    "historicalNote": "Fósiles recuperados por el profesor William Dyer de la Universidad de Miskatonic.",
+    "image": "/img/grimorio/los-antiguos.jpg"
   },
   {
     "id": 9,
@@ -78,7 +86,8 @@
     "origin": "Pantanos de Luisiana",
     "threatLevel": "Influencia Mental",
     "description": "Estatuilla tallada en piedra esteatita de color negro verdoso, de material no catalogado en la corteza terrestre. Emite una ligera vibración táctil cuando la marea sube.",
-    "historicalNote": "Confiscada por el inspector John Raymond Legrasse en la redada de 1907."
+    "historicalNote": "Confiscada por el inspector John Raymond Legrasse en la redada de 1907.",
+    "image": "/img/grimorio/culto-de-cthulhu.jpg"
   },
   {
     "id": 10,
@@ -87,7 +96,8 @@
     "origin": "Fosa Oceánica del Pacífico",
     "threatLevel": "Catastrófico",
     "description": "Divinidad acuática y progenitor colosal de los Profundos. Se alza sobre monolitos esculpidos en islas emergidas por fallas tectónicas, exigiendo sacrificios marinos.",
-    "historicalNote": "Avistado por un oficial naval náufrago durante la Primera Guerra Mundial."
+    "historicalNote": "Avistado por un oficial naval náufrago durante la Primera Guerra Mundial.",
+    "image": "/img/grimorio/dagon.jpg"
   },
   {
     "id": 11,
@@ -96,7 +106,8 @@
     "origin": "Espacio Interestelar",
     "threatLevel": "Degradación Biológica",
     "description": "Entidad informe compuesta por un espectro cromático ajeno a la Tierra. Cayó en un aerolito cerca de Arkham, marchitando la vegetación y drenando la fuerza vital del entorno.",
-    "historicalNote": "El área afectada se conoce en los archivos como 'El Erial Maldito'."
+    "historicalNote": "El área afectada se conoce en los archivos como 'El Erial Maldito'.",
+    "image": "/img/grimorio/el-color-que-cayo-del-cielo.jpg"
   },
   {
     "id": 12,
@@ -105,7 +116,8 @@
     "origin": "Yuggoth",
     "threatLevel": "Invocación de la Sombra",
     "description": "Cristal negro asimétrico tallado en épocas prehumanas. Permite contemplar visiones de mundos distantes; si se le priva por completo de luz, invoca al Morador de las Tinieblas.",
-    "historicalNote": "Resguardado en la torre abandonada de la Iglesia de la Sabiduría Estelar en Providence."
+    "historicalNote": "Resguardado en la torre abandonada de la Iglesia de la Sabiduría Estelar en Providence.",
+    "image": "/img/grimorio/trapezoedro-resplandeciente.jpg"
   },
   {
     "id": 13,
@@ -114,7 +126,8 @@
     "origin": "Túneles bajo Boston y París",
     "threatLevel": "Medio-Alto",
     "description": "Seres humanoides con facciones caninas y piel correosa que habitan galerías de catacumbas y cementerios. Antiguos humanos degenerados por hábitos de canibalismo ritual.",
-    "historicalNote": "Pintados en las telas hiperrealistas del artista desaparecido Richard Upton Pickman."
+    "historicalNote": "Pintados en las telas hiperrealistas del artista desaparecido Richard Upton Pickman.",
+    "image": "/img/grimorio/culto-de-ghouls.jpg"
   },
   {
     "id": 14,
@@ -123,7 +136,8 @@
     "origin": "Francia / Conde d'Erlette",
     "threatLevel": "Prohibido",
     "description": "Monografía francesa del siglo XVIII que detalla las sociedades secretas de necrófagos que operaban en las catacumbas de París y las fórmulas de preservación de restos óseos.",
-    "historicalNote": "Solo existen dos ejemplares conocidos tras la quema eclesiástica de 1737."
+    "historicalNote": "Solo existen dos ejemplares conocidos tras la quema eclesiástica de 1737.",
+    "image": "/img/grimorio/cultes-des-goules.jpg"
   },
   {
     "id": 15,
@@ -132,7 +146,8 @@
     "origin": "Yuggoth (Plutón)",
     "threatLevel": "Extirpación Cerebral",
     "description": "Organismos fúngicos rosados con pinzas de crustáceo. Extraen minerales de las colinas de Vermont y pueden extirpar cerebros vivos para almacenarlos en cilindros metálicos parlantes.",
-    "historicalNote": "Descubiertos en las colinas de Townshend durante las inundaciones de 1927."
+    "historicalNote": "Descubiertos en las colinas de Townshend durante las inundaciones de 1927.",
+    "image": "/img/grimorio/mi-go.jpg"
   },
   {
     "id": 16,
@@ -141,7 +156,8 @@
     "origin": "Hiperbórea / Eibon",
     "threatLevel": "Saber Primordial",
     "description": "Texto antiquísimo atribuido al brujo hiperbóreo Eibon. Describe los ciclos del dios Tsathoggua y las dimensiones heladas que antecedieron a la última glaciación.",
-    "historicalNote": "Manuscrito conservado en rollos de pergamino de piel de mastodonte."
+    "historicalNote": "Manuscrito conservado en rollos de pergamino de piel de mastodonte.",
+    "image": "/img/grimorio/libro-de-eibon.jpg"
   },
   {
     "id": 17,
@@ -150,7 +166,8 @@
     "origin": "Xoth",
     "threatLevel": "Muy Alto",
     "description": "Versiones menores pero igualmente letales de Cthulhu. Libraron guerras territoriales contra los Antiguos durante el Mesozoico antes de quedar sepultados bajo las aguas.",
-    "historicalNote": "Monitoreados por sonares oceanográficos de la Armada Argentina en la fosa de las Shetland."
+    "historicalNote": "Monitoreados por sonares oceanográficos de la Armada Argentina en la fosa de las Shetland.",
+    "image": "/img/grimorio/semilla-estelar-de-cthulhu.jpg"
   },
   {
     "id": 18,
@@ -159,7 +176,8 @@
     "origin": "La Gran Raza de Yith",
     "threatLevel": "Cronológico",
     "description": "Primer libro de filosofía oculta conocido en la historia humana. Traducido a partir de tablillas de arcilla conservadas en la ciudad perdida de Pnakotus, en Australia.",
-    "historicalNote": "Contiene el registro de intercambio de mentes a través de eones cósmicos."
+    "historicalNote": "Contiene el registro de intercambio de mentes a través de eones cósmicos.",
+    "image": "/img/grimorio/manuscritos-pnakoticos.jpg"
   },
   {
     "id": 19,
@@ -168,7 +186,8 @@
     "origin": "Tierra Prehistórica / Yith",
     "threatLevel": "Desplazamiento Temporal",
     "description": "Seres cónicos de 3 metros de altura con apéndices flexibles. Proyectan sus conciencias a través del tiempo, ocupando cuerpos humanos contemporáneos para recopilar conocimiento.",
-    "historicalNote": "Expedición del profesor Nathaniel Wingate Peaslee en 1935."
+    "historicalNote": "Expedición del profesor Nathaniel Wingate Peaslee en 1935.",
+    "image": "/img/grimorio/gran-raza-de-yith.jpg"
   },
   {
     "id": 20,
@@ -177,6 +196,7 @@
     "origin": "El Centro del Infinito",
     "threatLevel": "Aniquilación Cósmica",
     "description": "El sultán demoníaco ciego y necio. Yace en el centro del cosmos rodeado de deidades menores que danzan al son de flautas y tambores arcanos para evitar que despierte.",
-    "historicalNote": "Referenciado como la fuente de toda entropía en las fórmulas de Alhazred."
+    "historicalNote": "Referenciado como la fuente de toda entropía en las fórmulas de Alhazred.",
+    "image": "/img/grimorio/azathoth.jpg"
   }
 ]
