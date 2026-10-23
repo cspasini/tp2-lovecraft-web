@@ -68,33 +68,33 @@ src/
 
 ## Uso de IA
 
-| Aplicación utilizada | Modelo utilizado    |
-| -------------------- | ------------------- |
-| [OpenCode (Zen)]     | [Big Pickle]        |
-| [Claude]             | [Claude Sonnet 5.5] |
-| [Copilot]            | [GPT-4.1]           |
-| [Gemini]             | [Gemini Flash]      |
+| Aplicación utilizada | Modelo utilizado  |
+| -------------------- | ----------------- |
+| OpenCode (Zen)       | Big Pickle        |
+| Claude               | Claude Sonnet 5.5 |
+| Copilot              | GPT-4.1           |
+| Gemini               | Gemini Flash      |
 
 ---
 
 ## Capturas
 
-| Captura                                                               | Pantalla                                                  |
-| --------------------------------------------------------------------- | --------------------------------------------------------- |
-| ![Portada](docs/captura-home.png)                                     | Portada y accesos principales.                            |
-| ![Perfiles](docs/captura-perfiles.png)                                | Expedientes del equipo.                                   |
-| ![Grimorio](docs/captura-grimorio.png)                                | Catálogo con búsqueda, filtros y croquis de cada entidad. |
-| ![API](docs/captura-api.png)                                          | Sección de consumo de API pública.                        |
-| ![Arbol de reenderizado de componentes](docs/captura-render-tree.png) | Arquitectura.                                             |
-| ![Bitácora](docs/captura-bitacora.png)                                | Bitácora de desarrollo con filtros por fase.              |
+| Captura                                                                | Pantalla                                                  |
+| ---------------------------------------------------------------------- | --------------------------------------------------------- |
+| ![Portada](/docs/captura/home.png)                                     | Portada y accesos principales.                            |
+| ![Perfiles](/docs/captura/perfiles.png)                                | Expedientes del equipo.                                   |
+| ![Grimorio](/docs/captura/grimorio.png)                                | Catálogo con búsqueda, filtros y croquis de cada entidad. |
+| ![API](/docs/captura/api.png)                                          | Sección de consumo de API pública.                        |
+| ![Arbol de reenderizado de componentes](/docs/captura/render-tree.png) | Arquitectura.                                             |
+| ![Bitácora](/docs/captura/bitacora.png)                                | Bitácora de desarrollo con filtros por fase.              |
 
 ---
 
 ## Uso de IA por integrante
 
-| Integrante            | Aplicación  | Modelo              | Contenido o tarea                                                                                                                                             |
-| --------------------- | ----------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| [Sergio Pasini]       | OpenCode    | Big Pickle          | Arquitectura React Router, componentes, adaptación a mobile, integración de API de Open Library                                                               |
-| [Rubén Basconcelo]    | [Open Code] | [Big Pickle]        | Generación de los 20 croquis de campo del Grimorio, lógica de búsqueda y filtros y arquitectura general.                                                      |
-| [Juan Sebastián Páez] | [Gemini]    | [Geminni Flash]     | Lógica de Interacciones, hooks de React, estilos                                                                                                              |
-| [Alvaro Mamani]       | [Claude]    | [Claude Sonnet 5.5] | Generacion de Imagenes, código del catálogo con imágenes, CSS de ambientación , redacción de prompts para imágenes (Imágenes generadas con Copilot - GPT-4.1) |
+| Integrante          | Aplicación | Modelo            | Contenido o tarea                                                                                                                                             |
+| ------------------- | ---------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Sergio Pasini       | OpenCode   | Big Pickle        | Arquitectura React Router, componentes, adaptación a mobile, integración de API de Open Library                                                               |
+| Rubén Basconcelo    | Open Code  | Big Pickle        | Generación de los 20 croquis de campo del Grimorio, lógica de búsqueda y filtros y arquitectura general.                                                      |
+| Juan Sebastián Páez | Gemini     | Geminni Flash     | Lógica de Interacciones, hooks de React, estilos                                                                                                              |
+| Alvaro Mamani       | Claude     | Claude Sonnet 5.5 | Generacion de Imagenes, código del catálogo con imágenes, CSS de ambientación , redacción de prompts para imágenes (Imágenes generadas con Copilot - GPT-4.1) |
