@@ -79,13 +79,14 @@ src/
 
 ## Capturas
 
-| Captura                                | Pantalla                                                  |
-| -------------------------------------- | --------------------------------------------------------- |
-| ![Portada](docs/captura-home.png)      | Portada y accesos principales.                            |
-| ![Perfiles](docs/captura-perfiles.png) | Expedientes del equipo.                                   |
-| ![Grimorio](docs/captura-grimorio.png) | Catálogo con búsqueda, filtros y croquis de cada entidad. |
-| ![API](docs/captura-api.png)           | Sección de consumo de API pública.                        |
-| ![Bitácora](docs/captura-devlog.png)   | Bitácora de desarrollo con filtros por fase.              |
+| Captura                                                               | Pantalla                                                  |
+| --------------------------------------------------------------------- | --------------------------------------------------------- |
+| ![Portada](docs/captura-home.png)                                     | Portada y accesos principales.                            |
+| ![Perfiles](docs/captura-perfiles.png)                                | Expedientes del equipo.                                   |
+| ![Grimorio](docs/captura-grimorio.png)                                | Catálogo con búsqueda, filtros y croquis de cada entidad. |
+| ![API](docs/captura-api.png)                                          | Sección de consumo de API pública.                        |
+| ![Arbol de reenderizado de componentes](docs/captura-render-tree.png) | Arquitectura.                                             |
+| ![Bitácora](docs/captura-bitacora.png)                                | Bitácora de desarrollo con filtros por fase.              |
 
 ---
 
