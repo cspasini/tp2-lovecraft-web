@@ -7,6 +7,18 @@ export default function Home() {
         Desarrollo Web Frontend 2026
       </span>
       <h1 style={{ fontSize: '2.5rem', margin: '1rem 0' }}>Círculo Arcano de Arkham</h1>
+      <img
+        src="public/img/grimorio/Miskatonic.png"
+        alt="Universidad de Miskatonic"
+        style={{
+          display: 'block',
+          maxWidth: '100%',
+          width: '700px',
+          height: 'auto',
+          margin: '0 auto 2rem',
+          borderRadius: '6px'
+        }}
+      />
       <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem', lineHeight: '1.6', marginBottom: '2rem' }}>
         Bienvenidos a la base de operaciones de nuestro equipo. Esta aplicación React traslada la experiencia
         de horror cósmico iniciada en el TP1 hacia una arquitectura SPA moderna, con catálogo dinámico de datos locales,

@@ -37,7 +37,7 @@ export default function DevLog() {
         "Creación del componente modular <ProfileCard/> alimentado con datos estructurados de cada integrante.",
       detalle:
         "Se trasladaron las identidades del Umbral 5B. Se encapsularon las interacciones JavaScript del TP1 (El Observatorio, Mapa Estelar, Buceo en el Vacío y Susurros Cósmicos) como estados funcionales en React para cada tarjeta.",
-      responsables: "Sergio Pasini",
+      responsables: "Sergio Pasini & Juan Sebastian Paez",
     },
     {
       id: 4,
@@ -49,7 +49,7 @@ export default function DevLog() {
         "Estructurar un catálogo de 20 entidades y reliquias en un archivo JSON local.",
       detalle:
         "Se desarrolló una interfaz con barra de búsqueda en tiempo real por texto, filtrado por categorías de entidades/tomos, visualización expandible mediante acordeón y botón de restablecimiento total de filtros. Se crearon y agregaron imagenes en el grimorio",
-      responsables: "Rubén Basconcelo, Alvaro Mamani",
+      responsables: "Rubén Basconcelo & Alvaro Mamani",
     },
     {
       id: 5,
@@ -71,7 +71,7 @@ export default function DevLog() {
         "Representación dinámica de la estructura real de componentes con nodos colapsables.",
       detalle:
         "Se construyó un componente recursivo con estados independientes que permite contraer y desplegar las ramas del árbol de React para inspeccionar la jerarquía visual de la aplicación entregada.",
-      responsables: "Rubén Basconcelo",
+      responsables: "Rubén Basconcelo & Juan Sebastian Paez",
     },
     {
       id: 7,
