@@ -8,7 +8,7 @@ export default function Home() {
       </span>
       <h1 style={{ fontSize: '2.5rem', margin: '1rem 0' }}>Círculo Arcano de Arkham</h1>
       <img
-        src="public/img/grimorio/Miskatonic.png"
+        src="img/grimorio/Miskatonic.png"
         alt="Universidad de Miskatonic"
         style={{
           display: 'block',
